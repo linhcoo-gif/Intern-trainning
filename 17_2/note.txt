@@ -1,0 +1,11 @@
+Date: February 17 2025
+
+1. Công việc ngày hôm qua:
+
+Thực hiện clone giao diện trang tình trạng 70% (lệch nhỏ , chưa responsive với toàn bộ loại màn hình);
+2. Kế hoạch hôm nay :
+Hoàn thiện lại giao diện 
+3. Khó khăn gặp phải , điều học được :
+-Cách tổ chức selector trong scss
+-Làm rõ về 1 số đơn vị đo trong css (vw ,vh )
+-Nắm được tinh thần của các thành phần trang web trong responsive
