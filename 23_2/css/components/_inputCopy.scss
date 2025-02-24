@@ -1,0 +1,46 @@
+.input-copy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  border: 1px solid var(--line-3, #eaeaea);
+  background: var(--bginput, #f6f6f6);
+  height: 36px;
+  padding: 0 16px;
+  width: 100%;
+  img {
+    width: 20px;
+  }
+  input {
+    border-width: 0;
+    text-align: left;
+    background: transparent;
+    width: 90%;
+    @include h-6-title-15-pt-b();
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    background: transparent;
+    border-width: 0;
+  }
+  &.main {
+    border-radius: 8px;
+    border: 1px dashed #f5a42a;
+    background: var(--Trng, #fff);
+    height: 41px;
+    padding: 0 10.5px;
+
+    img {
+      width: 24px;
+    }
+    input {
+      border-width: 0;
+      @include h-0-24-pt-b();
+      color: var(--Brand, var(--Branding, #ff4c13));
+      text-align: center !important;
+      width: 100%;
+    }
+  }
+}

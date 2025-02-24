@@ -1,0 +1,77 @@
+.TableTag {
+  width: fit-content;
+  padding: 0 8px;
+  column-gap: 4px;
+  min-height: 20px;
+  border-radius: 20px;
+
+  &.danger {
+    background: rgba(#E20000, 0.2);
+
+    &:not(.show-icon) {
+      .TableTag-icon {
+        background: #E20000;
+      }
+    }
+
+    .TableTag-title {
+      color: var(--badge);
+    }
+  }
+
+  &.success {
+    background: rgba(#26AD60, 0.2);
+
+    &:not(.show-icon) {
+      .TableTag-icon {
+        background: #26AD60;
+      }
+    }
+
+    .TableTag-title {
+      color: var(--primary-green);
+    }
+  }
+
+  &.primary {
+    background: rgba(#2F69FD, 0.2);
+
+    &:not(.show-icon) {
+      .TableTag-icon {
+        background: #2F69FD;
+      }
+    }
+
+    .TableTag-title {
+      color: var(--link);
+    }
+  }
+
+  &.warning {
+    background: rgba(#FC9B09, 0.2);
+
+    &:not(.show-icon) {
+      .TableTag-icon {
+        background: #FC9B09;
+      }
+    }
+
+    .TableTag-title {
+      color: var(--hoveryellow);
+    }
+  }
+
+  &-icon {
+    flex: 0 0 12px;
+    max-width: 12px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    @include centerOriginImage;
+  }
+
+  &-title {
+    @include body-15-pt-r();
+    white-space: nowrap;
+  }
+}

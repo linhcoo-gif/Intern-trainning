@@ -1,0 +1,107 @@
+.Footer {
+  border-top: 1px solid var(--line-3, #eaeaea);
+  background: #fcfcfc;
+  padding-top: 45px;
+  @media (max-width: 768px) {
+    overflow-x: hidden;
+  }
+  .copy-right {
+    color: var(--main-white, var(--Trng, #fff));
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    background: var(--Primary-yellow, #ffb40b);
+    padding: 5px 16px;
+    margin-top: 45px;
+  }
+  .work-time,
+  span {
+    @include body-15-pt-r();
+  }
+  strong {
+    @include body-15-pt-r();
+    font-weight: 700;
+  }
+  a {
+    display: block;
+    &:hover {
+      color: var(--branding);
+    }
+  }
+  .logo-ft {
+    width: 150px;
+    margin-bottom: 30px;
+    img {
+      width: 100%;
+    }
+  }
+  h3,
+  h5 {
+    @include bookname-15-pt-m();
+  }
+  h5 {
+    display: block;
+    margin-bottom: 8px;
+  }
+  &-wrapper {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    @media (max-width: 767px) {
+      max-width: calc(100% - 32px);
+    }
+    &-item {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      justify-content: flex-start;
+      img {
+        width: unset;
+      }
+    }
+  }
+  &-scan {
+    width: 100%;
+    max-width: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+    img {
+      width: 100%;
+    }
+    a:hover {
+      opacity: 0.7;
+    }
+  }
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    &.socical {
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    a {
+      @include body-15-pt-r();
+      display: flex;
+      align-items: center;
+      img {
+        width: 24px;
+        display: block;
+        margin-right: 8px;
+      }
+    }
+  }
+  .container {
+    @media (max-width: 1024px) {
+      margin: 0 64px;
+    }
+    @media (max-width: 767px) {
+      margin: 0;
+    }
+  }
+}

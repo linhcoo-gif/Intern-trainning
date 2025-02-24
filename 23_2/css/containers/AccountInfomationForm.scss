@@ -1,0 +1,45 @@
+.AccountInfomationForm {
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--line-3, #eaeaea);
+
+  &-header {
+    border-bottom: 1px dashed var(--line-3, #eaeaea);
+    padding-bottom: 15px;
+    @include h-4-18-pt-b-tieude-the();
+  }
+
+  &-form {
+    padding: 15px 0;
+
+    &>.row {
+      row-gap: 24px;
+    }
+
+    &-label {
+      @include body-15-pt-r();
+      @media (max-width: 991px) {
+        margin-bottom: -16px;
+      }
+    }
+  }
+
+  &-footer {
+    border-top: 1px dashed var(--line-3, #eaeaea);
+    padding-top: 15px;
+    column-gap: 15px;
+
+    button {
+      height: 40px;
+      @include l-btn-18-pt-sm();
+      font-size: 15px;
+
+      &:first-child {
+        font-weight: 400;
+        background: rgba(#a4a4a4, 0.05);
+        color: var(--Icon, #54555b);
+        border: none;
+      }
+    }
+  }
+}

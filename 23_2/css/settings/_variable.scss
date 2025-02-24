@@ -1,0 +1,35 @@
+// Variable overide bootstrap theme
+$commonTheme: 'theme';
+$list-group-active-bg: var(--bginput);
+$list-group-active-border-color: #EAEAEA;
+$list-group-active-color: var(--black);
+$grid-gutter-width: 1.5rem;
+$btn-font-size: 13px;
+$btn-font-weight: 400;
+$btn-padding-x: 12px;
+$btn-padding-y: 8px;
+$blue: #2F69FD;
+$green: #26AD60;
+$box-shadow: 0px 2px 5px 0px rgba(167, 111, 1, 0.25);
+$breadcrumb-active-color: var(--hoveryellow);
+$table-border-color: var(--line3);
+$border-radius: 8px;
+$container-padding-x: 2rem;
+//Variable follow theme
+$font-family-sans-serif: "Roboto";
+$orange-brand: var(--branding);
+$spacer-theme: 2px;
+$spacers-theme: (
+  0: 0,
+  1: $spacer-theme * 1,
+  2: $spacer-theme * 2,
+  3: $spacer-theme * 3,
+  4: $spacer-theme * 4,
+  5: $spacer-theme * 5,
+  6: $spacer-theme * 6,
+  15: 15px,
+  30: $spacer-theme * 15,
+  60: $spacer-theme * 30,
+  16: 16px,
+  24: 24px,
+) !default;

@@ -1,0 +1,32 @@
+.quantity-control {
+  display: flex;
+  align-items: center;
+  width: 121px;
+  @media (max-width: 991px) {
+    width: unset;
+  }
+  .btn-default {
+    &:first-child {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    &:last-child {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+}
+
+.quantity-control input {
+  width: 45px;
+  text-align: center;
+  @include bookname-15-pt-m();
+  color: var(--black);
+  height: 32px;
+  border: none;
+  background-color: var(--bginput);
+  //padding-left: 15px;
+  &:focus {
+    outline: none;
+  }
+}

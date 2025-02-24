@@ -1,0 +1,49 @@
+.search-box {
+  &-category {
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+    }
+  }
+  &-left {
+    //width: calc(100%/2);
+    &-item {
+      @include h-6-title-15-pt-b();
+      color: #737373;
+      &:first-child{
+        @include media-breakpoint-down(lg){
+          display: none;
+        }
+      }
+      &-link {
+        padding: 8px;
+        @include bookname-15-pt-m();
+        font-size: 14px;
+        color: var(--icon);
+        position: relative;
+        transition: 0.5s;
+        &:hover {
+          color: var(--hoveryellow);
+        }
+        &:after {
+          position: absolute;
+          content: "";
+          width: 1px;
+          height: 15px;
+          right: 0;
+          background: var(--text-hidden);
+          opacity: 0.3;
+        }
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+    }
+  }
+  &-input {
+    width: calc(100% / 3);
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+      margin: 15px 0;
+    }
+  }
+}

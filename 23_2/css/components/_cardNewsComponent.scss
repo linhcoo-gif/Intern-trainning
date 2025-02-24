@@ -1,0 +1,155 @@
+.CardNewsComponent {
+  display: flex;
+  padding: 30px 0px;
+  align-items: flex-start;
+  gap: 30px;
+  flex-direction: row;
+  border-bottom: 1px dashed var(--line3);
+  @media (max-width: 768px) {
+    gap: 8px;
+    padding: 15px 0px;
+  }
+  &.card-small {
+    gap: 15px;
+    padding: 8px 15px;
+    .CardNewsComponent-body-title {
+      @include ellipsis(2);
+      @include bookname-15-pt-m();
+    }
+    .CardNewsComponent-body-description {
+      @include ellipsis(2);
+      min-height: unset;
+      text-align: left;
+    }
+    .CardNewsComponent-image {
+      max-width: 69px !important;
+      height: 69px !important;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        width: unset !important;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: center;
+        object-position: center;
+        border-radius: 5px;
+        transition: 0.5s;
+      }
+    }
+  }
+  &-image {
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 1.5;
+    max-width: 240px;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      max-width: 160px;
+      border-radius: 0px;
+      position: relative;
+      width: 100%;
+      height: 110px;
+      img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: center;
+        object-position: center;
+        border-radius: 5px;
+        transition: 0.5s;
+      }
+    }
+    .percent-sale {
+      left: 0;
+      background: url("../images/image-badge-flash-sale.png") no-repeat center
+        center;
+      background-size: cover;
+      width: 65px;
+      color: $white;
+      top: 0;
+    }
+  }
+  &-body {
+    position: relative;
+    height: 100%;
+    flex: 1;
+    &-title {
+      color: var(--text-dark);
+      @include h-5-16-pt-b();
+      margin-bottom: 4px;
+      text-align: left;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1; /* number of lines to show */
+      line-clamp: 1;
+      -webkit-box-orient: vertical;
+      @media (max-width: 768px) {
+        -webkit-line-clamp: 2; /* number of lines to show */
+        line-clamp: 2;
+      }
+    }
+    &-description {
+      @include body-2();
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 4; /* number of lines to show */
+      line-clamp: 4;
+      -webkit-box-orient: vertical;
+      text-align: justify;
+      max-height: calc(100% - 40px);
+      min-height: 118px;
+      @media (max-width: 1200px) {
+        -webkit-line-clamp: 2; /* number of lines to show */
+        line-clamp: 2;
+        min-height: 40px;
+        @include body-15-pt-r();
+      }
+    }
+    &-label {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 4px;
+      color: var(--Icon, #54555b);
+      bottom: 0;
+      left: 0;
+      &.absolute {
+        position: absolute;
+      }
+      @media (max-width: 1200px) {
+        bottom: -32px;
+      }
+      @media (max-width: 768px) {
+        display: none;
+      }
+      span {
+        @include body-15-pt-r();
+      }
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

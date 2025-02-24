@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@mixin h-0-24-pt-b() {
+	font-size: 24px;
+	font-family: "Roboto";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 130%;
+	letter-spacing: 0.2em;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin h-0-24-b-heading-card() {
+	font-size: 24px;
+	font-family: "Roboto";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+@mixin h-1-book-tittle-detail-22-pt-bold() {
+	font-size: 22px;
+	font-family: "Roboto";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin h-2-20-pt-b-h-0-mobile() {
+	font-size: 20px;
+	font-family: "Roboto";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin h-4-heading-card() {
+	font-size: 18px;
+	font-family: "Roboto";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+@mixin h-4-18-pt-b-tieude-the() {
+	font-size: 18px;
+	font-family: "Roboto";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+@mixin title-card-18-pt-sm() {
+	font-size: 18px;
+	font-family: "Roboto";
+	font-weight: 600;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin h-4-book-subtitle-detail-18-pt-b() {
+	font-size: 18px;
+	font-family: "Roboto";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 150%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin h-5-16-pt-b() {
+	font-size: 16px;
+	font-family: "Roboto";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin h-6-header-card-mb-16-pt() {
+	font-size: 16px;
+	font-family: "Roboto";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+@mixin h-6-title-15-pt-b() {
+	font-size: 15px;
+	font-family: "Roboto";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin nav-menu-15-pt-m() {
+	font-size: 15px;
+	font-family: "Roboto";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 130%;
+	letter-spacing: 0.5px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin bookname-15-pt-m() {
+	font-size: 15px;
+	font-family: "Roboto";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin body-15-pt-r() {
+	font-size: 15px;
+	font-family: "Roboto";
+	font-weight: 400;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin small-14-pt-r() {
+	font-size: 14px;
+	font-family: "Roboto";
+	font-weight: 400;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin badge-hot() {
+	font-size: 13px;
+	font-family: "Roboto";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 21px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin tiny-13-pt-b() {
+	font-size: 13px;
+	font-family: "Roboto";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 21px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin tiny-body-13-pt-r() {
+	font-size: 13px;
+	font-family: "Roboto";
+	font-weight: 400;
+	font-style: normal;
+	line-height: 21px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin l-btn-18-pt-sm() {
+	font-size: 18px;
+	font-family: "Roboto";
+	font-weight: 600;
+	font-style: normal;
+	line-height: 24px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin m-btn-18-pt-r() {
+	font-size: 18px;
+	font-family: "Roboto";
+	font-weight: 400;
+	font-style: normal;
+	line-height: 24px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin s-btn-15-pt-medium() {
+	font-size: 15px;
+	font-family: "Roboto";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin sm-btn-15-pt-uppercase() {
+	font-size: 15px;
+	font-family: "Roboto";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+@mixin h-5-16-extra-bold() {
+	font-size: 16px;
+	font-family: "Roboto";
+	font-weight: 800;
+	font-style: normal;
+	line-height: 150%;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+@mixin small-14-pt-m() {
+	font-size: 14px;
+	font-family: "Roboto";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin tiny-cost-13-r() {
+	font-size: 13px;
+	font-family: "Roboto";
+	font-weight: 400;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: line-through;
+	text-transform: none;
+}
+@mixin h-2-20-pt-extra-bold-flash-sale() {
+	font-size: 20px;
+	font-family: "Roboto";
+	font-weight: 800;
+	font-style: normal;
+	line-height: 150%;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+@mixin body-2() {
+	font-size: 15px;
+	font-family: "Roboto";
+	font-weight: 400;
+	font-style: normal;
+	line-height: 150%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin label-light-1() {
+	font-size: 11.44059944152832px;
+	font-family: "Roboto";
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin label-bold-1() {
+	font-size: 15px;
+	font-family: "Roboto";
+	font-weight: 800;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+@mixin label-bold-2() {
+	font-size: 18px;
+	font-family: "Roboto";
+	font-weight: 800;
+	font-style: normal;
+	line-height: 150%;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+@mixin label-bold-3() {
+	font-size: 12px;
+	font-family: "Roboto";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 15.75px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin label-light-2() {
+	font-size: 12px;
+	font-family: "Roboto";
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin label-bold-4() {
+	font-size: 18px;
+	font-family: "Roboto";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 130%;
+	letter-spacing: 0.02em;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin label-light-3() {
+	font-size: 18px;
+	font-family: "Roboto";
+	font-weight: 400;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+@mixin label-bold-5() {
+	font-size: 24px;
+	font-family: "Roboto";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 130%;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin effect-style-bongdo() {
+	box-shadow: 0px 2px 10px #000000;
+}
+@mixin effect-style-shadow-card-yl() {
+	box-shadow: 0px 2px 5px #a76f01;
+}

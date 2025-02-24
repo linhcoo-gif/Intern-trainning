@@ -1,0 +1,208 @@
+$btn-color: $white;
+$btn-bg: $orange-brand;
+$btn-border-color: $orange-brand;
+$btn-hover-color: $btn-color;
+$btn-hover-bg: #ff3f02;
+$btn-active-bg: #ee3d05;
+.btn {
+  --#{$prefix}btn-font-size: #{$btn-font-size};
+  --#{$prefix}btn-font-weight: #{$btn-font-weight};
+  --#{$prefix}btn-border-radius: 5px;
+  &.has-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .btn-icon {
+      img {
+        width: unset;
+      }
+    }
+    .btn-text {
+      font-family: "Roboto";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+    }
+  }
+  &-primary {
+    --#{$prefix}btn-active-bg: #1F54DD;
+    font-weight: 700;
+    line-height: 21px;
+    &:hover{
+      background-color: #225BEF;
+    }
+  }
+  &-danger {
+    --#{$prefix}btn-color: #{$btn-color};
+    --#{$prefix}btn-bg: var(--badge);
+    --#{$prefix}btn-border-color: var(--badge);
+    --#{$prefix}btn-hover-color: #{$btn-hover-color};
+    --#{$prefix}btn-hover-bg: var(--badge);
+    --#{$prefix}btn-hover-border-color: var(--badge);
+    --#{$prefix}btn-active-color: #{$btn-color};
+    --#{$prefix}btn-active-bg: var(--badge);
+    --#{$prefix}btn-active-border-color: var(--badge);
+    --#{$prefix}btn-disabled-bg: var(--badge);
+    --#{$prefix}btn-disabled-border-color: var(--badge);
+  }
+  &-success {
+    --#{$prefix}btn-color: #{$btn-color};
+    --#{$prefix}btn-hover-color: #{$btn-color};
+    --#{$prefix}btn-active-color: #{$btn-color};
+    --#{$prefix}btn-active-bg: #168143;
+    --#{$prefix}btn-hover-bg: #239955;
+    --#{$prefix}btn-hover-border-color:#239955;
+    --#{$prefix}btn-active-border-color: #168143;
+    font-weight: 400;
+    line-height: 21px;
+    white-space: nowrap;
+    &:hover{
+      background-color: var(--#{$prefix}btn-hover-bg);
+    }
+  }
+  &-orange-brand {
+    --#{$prefix}btn-color: #{$btn-color};
+    --#{$prefix}btn-bg: #{$btn-bg};
+    --#{$prefix}btn-border-color: #{$btn-border-color};
+    --#{$prefix}btn-hover-color: #{$btn-hover-color};
+    --#{$prefix}btn-hover-bg: #{$btn-hover-bg};
+    --#{$prefix}btn-hover-border-color: #{$btn-hover-bg};
+    --#{$prefix}btn-active-color: #{$btn-color};
+    --#{$prefix}btn-active-bg: #{$btn-active-bg};
+    --#{$prefix}btn-active-border-color: unset;
+    --#{$prefix}disabled-bg: #{$orange-brand};
+    --#{$prefix}disabled-border-color: #{$orange-brand};
+    background-color: $orange-brand;
+    font-weight: 600;
+    border-color: unset;
+    &:hover{
+      background-color: #FF3F02;
+    }
+  }
+  &-info {
+    --#{$prefix}btn-color: #{$btn-color};
+    --#{$prefix}btn-border-color: #{#2f69fd};
+    --#{$prefix}btn-hover-color: #{$btn-hover-color};
+    --#{$prefix}btn-hover-bg: #{#6b95ff};
+    --#{$prefix}btn-hover-border-color: #{#6b95ff};
+    --#{$prefix}btn-active-color: #{$btn-color};
+    --#{$prefix}btn-active-bg: #{#6b95ff};
+    --#{$prefix}btn-active-border-color: #{#6b95ff};
+    --#{$prefix}disabled-bg: #{#2f69fd};
+    --#{$prefix}disabled-border-color: #{#2f69fd};
+    background: var(--Link, #2f69fd);
+    &-outline {
+      --#{$prefix}btn-color: #{$btn-color};
+      --#{$prefix}btn-border-color: #{#2f69fd0d};
+      --#{$prefix}btn-hover-color: #{$btn-hover-color};
+      --#{$prefix}btn-hover-bg: #{#6b95ff};
+      --#{$prefix}btn-hover-border-color: #{#6b95ff};
+      --#{$prefix}btn-active-color: #{$btn-color};
+      --#{$prefix}btn-active-bg: #{#6b95ff};
+      --#{$prefix}btn-active-border-color: #{#6b95ff};
+      color: #2f69fd;
+      background: #2f69fd0d;
+    }
+  }
+  &-outline-orange {
+    --#{$prefix}btn-color: var(--branding);
+    --#{$prefix}btn-hover-bg: rgba(255, 76, 19, 0.15);
+    --#{$prefix}btn-border-color: var(--branding);
+    --#{$prefix}btn-hover-color: #{$white};
+    --#{$prefix}btn-hover-border-color: var(--branding);
+    --#{$prefix}btn-active-border-color: var(--branding);
+    --#{$prefix}btn-active-bg: rgba(255, 76, 19, 0.30);
+    --#{$prefix}btn-active-color:var(--branding);
+    --#{$prefix}btn-active-border-color:var(--branding);
+    background-color: rgba(255, 76, 19, 0.05);
+    &:hover{
+      background-color: var(--#{$prefix}btn-hover-bg);
+    }
+  }
+  &-outline-xs {
+    --#{$prefix}btn-hover-color: #{$btn-color};
+    --#{$prefix}btn-active-color: #{$btn-color};
+    padding: 4px 10px;
+    min-width: 66px;
+    border-radius: 4px;
+    display: block;
+    @include media-breakpoint-down(sm) {
+      padding: 4px;
+    }
+  }
+  &-outline-radius {
+    --#{$prefix}btn-border-color: rgba(47, 105, 253, 0.1);
+    border-radius: 21px;
+    background-color: rgba(47, 105, 253, 0.1);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    padding: 4px 24px;
+  }
+  &-default {
+    --#{$prefix}btn-active-color: var(--text-hidden);
+    --#{$prefix}btn-active-bg: rgba(164, 164, 164, 0.30);
+    --#{$prefix}btn-active-border-color: unset;
+    --#{$prefix}btn-active-border: unset;
+    background-color: var(--line3);
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    border-radius: unset;
+    padding: 0;
+    &:hover{
+      background-color: rgba(164, 164, 164, 0.15);
+    }
+  }
+  &-warning {
+    --#{$prefix}btn-color: #{$white};
+    --#{$prefix}btn-hover-color: #{$white};
+    --#{$prefix}btn-active-color: #{$white};
+    --#{$prefix}btn-active-bg: #F47500;
+    padding: 4px 12px;
+    @include s-btn-15-pt-medium();
+    &:hover{
+      background-color:  var(--hoveryellow);
+    }
+    &.warning-style2 {
+      padding: 8px 12px;
+      @include l-btn-18-pt-sm();
+    }
+  }
+  &-outline-gray {
+    --#{$prefix}btn-hover-bg: var(--text-hidden);
+    --#{$prefix}btn-border-color: var(--text-hidden);
+    --#{$prefix}btn-hover-border-color: var(--text-hidden);
+    --#{$prefix}btn-active-border-color: var(--text-hidden);
+    --#{$prefix}btn-active-bg: var(--text-hidden);
+    background: var(--text-hidden);
+    &-2 {
+      border-radius: 8px;
+      @include body-15-pt-r();
+      border: 1px solid var(--line-3, #eaeaea);
+      background: rgba(164, 164, 164, 0.05);
+      &:hover {
+       background: rgba(164, 164, 164, 0.15);
+      }
+    }
+    &-light {
+      background: var(--line3);
+    }
+  }
+  &-bill {
+    @include l-btn-18-pt-sm();
+    width: 100%;
+    span {
+      &:last-child {
+        color: var(--main-white, var(--Trng, #fff));
+        font-family: "Roboto";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.pagination {
+  // scss-docs-start pagination-css-vars
+  --#{$prefix}pagination-padding-x: 8px;
+  --#{$prefix}pagination-padding-y: 8px;
+  --#{$prefix}pagination-color: var(--text-hidden);
+  --#{$prefix}pagination-bg: #{$pagination-bg};
+  --#{$prefix}pagination-border-width: 1px;
+  --#{$prefix}pagination-border-color: #{$pagination-border-color};
+  --#{$prefix}pagination-border-radius: "inherit";
+  --#{$prefix}pagination-hover-color: #a2a2a2;
+  --#{$prefix}pagination-hover-bg: #e6e6e5;
+  --#{$prefix}pagination-hover-border-color: #e6e6e5;
+  --#{$prefix}pagination-focus-color: #{$white};
+  --#{$prefix}pagination-focus-bg: var(--primary-yellow);
+  --#{$prefix}pagination-focus-box-shadow: #{$pagination-focus-box-shadow};
+  --#{$prefix}pagination-active-color: #{$white};
+  --#{$prefix}pagination-active-bg: var(--primary-yellow);
+  --#{$prefix}pagination-active-border-color: var(--primary-yellow);
+  --#{$prefix}pagination-disabled-color: #{$pagination-disabled-color};
+  --#{$prefix}pagination-disabled-bg: #{$pagination-disabled-bg};
+  --#{$prefix}pagination-disabled-border-color: #{$pagination-disabled-border-color};
+}
+.page-item {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  &:first-child .page-link {
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+  }
+  &:last-child .page-link {
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+  }
+  margin: 0 6px;
+}
+.page-link {
+  @include bookname-15-pt-m();
+  width: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0;
+  &:focus{
+    box-shadow: unset;
+  }
+}

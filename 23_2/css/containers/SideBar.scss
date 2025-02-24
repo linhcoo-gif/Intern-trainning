@@ -1,0 +1,127 @@
+.SideBar {
+  border-radius: 8px;
+  border: 1px solid var(--line-3, #eaeaea);
+  overflow: hidden;
+
+  @media (max-width: 991px) {
+    margin-bottom: 15px;
+  }
+
+  &-main {
+    overflow: hidden;
+
+    @media (max-width: 991px) {
+      max-height: 0;
+      transition: 0.3s ease;
+
+      &.active {
+        transition: 0.5s ease;
+        max-height: 200vh;
+      }
+    }
+  }
+
+  &-header {
+    padding: 12px 15px;
+    column-gap: 8px;
+    background: var(--bginput);
+
+    &-avatar {
+      flex: 0 0 48px;
+      max-width: 48px;
+      width: 48px;
+      height: 48px;
+      @include centerScaleImage;
+      border-radius: 50%;
+      border: 2px solid var(--brand2)
+    }
+
+    &-info {
+      flex: 1;
+
+      &-title {
+        @include h-6-title-15-pt-b();
+        margin-bottom: 4px;
+      }
+
+      &-description {
+        @include tiny-cost-13-r();
+        text-decoration: unset;
+      }
+    }
+
+    &-toggle {
+      @include centerOriginImage;
+      flex: 0 0 32px;
+      max-width: 32px;
+      height: 32px;
+      width: 32px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      transform: rotate(-180deg);
+      display: none;
+
+      &.active {
+        transform: rotate(0deg);
+      }
+
+      @media (max-width: 991px) {
+        display: flex;
+      }
+    }
+  }
+
+  &-body {
+    .accordion-header {
+      min-height: 42px;
+    }
+
+    .accordion-item {
+      border-left: none;
+      border-right: none;
+
+
+      .accordion-body-children-item-link {
+        transition: 0.3s ease;
+
+        &:hover {
+          background: var(--bs-tertiary-bg);
+        }
+      }
+
+      &:last-child {
+        border-bottom-style: dashed;
+        border-radius: 0;
+      }
+    }
+
+    .accordion-body-children-item-link,
+    .accordion-header-text {
+      column-gap: 8px;
+
+      span {
+        flex: 0 0 16px;
+        max-width: 16px;
+        height: 16px;
+        width: 16px;
+        @include centerOriginImage;
+      }
+    }
+  }
+
+  &-footer {
+    padding: 4px;
+
+    .btn-outline-danger {
+      &:hover {
+        color: var(--bs-btn-active-border-color);
+        background-color: rgba(#dc3545, 0.1);
+      }
+
+      &:active {
+        color: var(--bs-btn-active-border-color);
+        background-color: rgba(#dc3545, 0.2);
+      }
+    }
+  }
+}

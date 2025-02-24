@@ -1,0 +1,21 @@
+.banner-single{
+  @media (min-width: 576px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  @include media-breakpoint-down(sm){
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  @include media-breakpoint-up(lg){
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  img{
+    width: 100%;
+    display: block;
+  }
+}
+.top-sale{
+  padding: 15px 0;
+}

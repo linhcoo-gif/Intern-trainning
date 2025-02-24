@@ -1,0 +1,302 @@
+.comment-box {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--line3);
+  .comment__submit {
+    padding: 0 15px;
+    @include media-breakpoint-down(sm){
+      padding: 0;
+    }
+  }
+  @include media-breakpoint-down(sm){
+    padding: 8px 15px;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+  .comment-box {
+    margin-bottom: 24px;
+  }
+}
+
+.comment-box .comment__title {
+  @include h-4-heading-card();
+  color: var(--body-text);
+  padding: 12px 15px;
+  @include media-breakpoint-down(md){
+    padding: 12px 0px;
+  }
+}
+
+.comment-box .comment__list {
+  padding: 15px;
+  @include media-breakpoint-down(md){
+    padding: 0;
+  }
+}
+.comment-box .comment__list .comment__list-user {
+  display: flex;
+}
+
+.comment-box .comment__list .comment__list-user .user__avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.comment-box .comment__list .comment__list-user .user__name {
+  line-height: 1.5;
+  font-size: 14px;
+  margin: 0 0 8px 8px;
+  color: #333;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .comment-box .comment__list .comment__list-user .user__name {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .comment-box .comment__list .comment__list-content {
+    margin-left: 0;
+  }
+}
+
+.comment-box .comment__list .comment__list-content .list-content__cm {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #828282;
+  margin-left: 32px;
+  @media only screen and (max-width: 767px) {
+    margin-left: 15px;
+  }
+}
+
+.comment-box .comment__list .comment__list-content .list-content__reply {
+  margin-top: 4px;
+  margin-left: 32px;
+  @media only screen and (max-width: 767px) {
+    margin-left: 15px;
+  }
+}
+
+.comment-box
+  .comment__list
+  .comment__list-content
+  .list-content__reply
+  .content__reply-name {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 16px;
+  color: #2f80ed;
+}
+
+.comment-box .comment__list .comment__list-content .list-content__reply small {
+  margin-left: 10px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #828282;
+}
+
+.comment-box .comment__list .comment__list-content .comment__list-rectangle {
+  margin-top: 16px;
+  padding: 20px 10px;
+  margin-bottom: 30px;
+  background: #f8f8f8;
+  border: 1px solid #f2f2f2;
+  border-radius: 8px;
+  position: relative;
+}
+
+.comment-box
+  .comment__list
+  .comment__list-content
+  .comment__list-rectangle::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #f8f8f8;
+  border-top: 1px solid #f2f2f2;
+  border-left: 1px solid #f2f2f2;
+  transform: translateY(-50%) rotate(45deg);
+  left: 14px;
+  top: 0;
+}
+
+.comment-box
+  .comment__list
+  .comment__list-content
+  .comment__list-rectangle
+  .comment__list-user
+  .user__name
+  .name-role {
+  margin-left: 8px;
+  font-size: 12px;
+  color: #4f4f4f;
+  background: #f2c94c;
+  line-height: 14.06px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border-radius: 3px;
+  padding: 3px 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  .comment-box
+    .comment__list
+    .comment__list-content
+    .comment__list-rectangle
+    .comment__list-user
+    .user__name
+    .name-role {
+    margin-left: 5px;
+  }
+}
+
+.comment-box
+  .comment__list
+  .comment__list-content
+  .comment__list-rectangle
+  .comment__list-content
+  .list-content__cm
+  .cm-greeting {
+  display: block;
+  padding-bottom: 2px;
+}
+
+.comment-box .comment__list .comment__list-content .comment__reply {
+  padding: 0 10px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}
+
+.comment-box .comment__list .comment__list-content .comment__reply.active {
+  opacity: 1;
+  overflow: visible;
+  max-height: 100%;
+}
+
+.comment-box
+  .comment__list
+  .comment__list-content
+  .comment__reply
+  form
+  .comment__avatar {
+  display: flex;
+}
+
+.comment-box
+  .comment__list
+  .comment__list-content
+  .comment__reply
+  form
+  .comment__avatar
+  .avt {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comment-box
+  .comment__list
+  .comment__list-content
+  .comment__reply
+  form
+  .comment__avatar
+  .reply {
+  margin-left: 10px;
+  width: 90%;
+  padding: 6px 10px;
+  border: none;
+  border: 1px solid #d1d1d1;
+  margin-bottom: 20px;
+  box-shadow: none !important;
+  border-radius: 8px;
+  display: inline-block;
+  transition: border 0.25s linear;
+  font-weight: 400;
+  font-size: 14px;
+  outline: 0;
+}
+
+.comment-box .comment__text .message__form {
+  position: relative;
+}
+
+.comment-box .comment__text .message__form .message {
+  width: 100%;
+  font-size: 13px;
+  position: relative;
+  padding: 10px 16px;
+  resize: none;
+  outline: 0;
+  border: 1px solid #d1d1d1;
+  margin-bottom: 1.5rem;
+  min-height: 80px;
+  box-shadow: none !important;
+  border-radius: 5px;
+}
+
+.comment-box .comment__text .message__form .message::-webkit-input-placeholder {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.comment-box .comment__text .message__form .message::-moz-placeholder {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.comment-box .comment__text .message__form .message:-ms-input-placeholder {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.comment-box .comment__text .message__form .message::-ms-input-placeholder {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.comment-box .comment__text .message__form .message::placeholder {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.comment-box .comment__text .message__form .icon-mess {
+  position: absolute;
+  right: 10px;
+  bottom: 40px;
+}
+
+.comment-box .comment__text .btn-submit {
+  text-align: center;
+}
+
+.comment-box .comment__text .btn-submit a {
+  color: #fff;
+  padding: 6px 10px 7px 11px;
+  background: #d4b26b;
+  border-radius: 5px;
+}

@@ -1,0 +1,153 @@
+.Payment {
+  padding: 23px;
+  border-radius: 12px;
+  border: 1px solid var(--line-3, #eaeaea);
+  background: var(--bg-input, #f6f6f6);
+  margin-bottom: 30px;
+  @media (max-width: 991px) {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  &-wrapper {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    &-info-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      h5 {
+        @include h-6-title-15-pt-b();
+      }
+      a {
+        color: var(--Link, var(--Link, #2f69fd));
+        @include bookname-15-pt-m();
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  .note-info {
+    border-radius: 8px;
+    background: rgba(47, 105, 253, 0.1);
+    padding: 15px;
+    @include small-14-pt-r();
+    color: var(--Link, var(--Link, #2f69fd));
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 16px;
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  form {
+    .radio {
+      padding: 0;
+    }
+  }
+}
+.PaymentSuccess {
+  max-width: 500px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  &-icon {
+    width: 80px;
+    display: block;
+    margin: 0 auto;
+  }
+  &-title {
+    @include h-1-book-tittle-detail-22-pt-bold();
+    text-align: center;
+  }
+  ul {
+    list-style: disc;
+    margin-left: 16px;
+    margin-bottom: 0;
+    li {
+      color: var(--body-text, #333);
+      @include body-15-pt-r();
+      gap: 8px;
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        color: var(--Link, #2f69fd);
+      }
+    }
+  }
+  .btn {
+    @include l-btn-18-pt-sm();
+    width: 100%;
+    font-size: 15px;
+    &-info-outline {
+      @include m-btn-18-pt-r();
+      font-size: 15px;
+    }
+  }
+
+  &-note {
+    border-radius: 8px;
+    background: var(--bg-card, #fcf8f1);
+    padding: 15px;
+    display: flex;
+    gap: 8px;
+    @include small-14-pt-r();
+    margin-bottom: 15px;
+    align-items: center;
+    color: rgba(255, 76, 19, 0.75);
+    img {
+      width: 16px;
+      height: 16px;
+    }
+    p {
+      margin: 0;
+    }
+    a {
+      color: var(--Link, #2f69fd);
+    }
+  }
+  .PaymentSuccess-btns {
+    display: flex;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+  }
+}
+.dash {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed var(--line-3, hsl(0, 0%, 92%));
+  margin-bottom: 16px;
+}
+.Cart.Medthod {
+  @media (min-width: 992px) {
+    .col-6 {
+      width: calc(100% - 295px);
+    }
+    .Cart-row,
+    .Cart-heading {
+      justify-content: space-between;
+      gap: 0;
+    }
+    .Cart-info-mobile-wrapper,
+    .Cart-heading-title .text-right {
+      justify-content: flex-end;
+      .col-2 {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 370px) {
+    .Cart-card {
+      flex-direction: row;
+    }
+  }
+}

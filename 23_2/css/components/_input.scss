@@ -1,0 +1,118 @@
+.input-group {
+  .input-group-text-icon{
+    position: absolute;
+    top: 50%;
+    right: 3px;
+    transform: translateY(-50%);
+    border: unset;
+    background-color: unset;
+    z-index: 20;
+
+    #togglePassword {
+      cursor: pointer;
+
+      &.fa-eye {
+        .slash {
+          display: none;
+        }
+      }
+    }
+  }
+  &.has-icon {
+    .form-control {
+      padding-left: 38px;
+      border-radius: 5px !important;
+    }
+    .select2-container .select2-selection--single .select2-selection__rendered {
+      padding-left: 38px;
+      font-size: 15px;
+      font-family: "Roboto";
+      font-weight: 400;
+    }
+  }
+  &-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    z-index: 6;
+    transform: translateY(-50%);
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  .icon-search {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 88;
+    img{
+      @include media-breakpoint-down(sm){
+        width: 24px;
+      }
+    }
+  }
+  &:not(.has-validation) {
+    > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(
+        .form-floating
+      ),
+    > .dropdown-toggle:nth-last-child(n + 3),
+    > .form-floating:not(:last-child) > .form-control,
+    > .form-floating:not(:last-child) > .form-select {
+      @include border-end-radius(5px);
+    }
+  }
+}
+.form-control {
+  @include body-15-pt-r();
+  color: var(--black);
+  border-radius: 8px;
+  padding: 8px 16px;
+  border: 1px solid var(--line3);
+  @media (max-width: 375px) {
+    font-size: 12px;
+  }
+  &:focus {
+    box-shadow: unset;
+    border-color: var(--line3);
+  }
+  &::placeholder {
+    color: var(--text-hidden);
+    opacity: 1;
+  }
+  &.has-bg {
+    border: unset;
+    background: var(--bginput);
+    padding: 8px;
+  }
+}
+.select2-container {
+  width: 100% !important;
+  .select2-selection--single {
+    height: 43px;
+    .select2-selection__arrow {
+      height: 43px;
+    }
+    .select2-selection__rendered {
+      line-height: 40px;
+      color: var(--text-hidden);
+    }
+  }
+  &--default {
+    .select2-selection--single {
+      border: 1px solid var(--line3);
+      border-radius: 8px;
+    }
+  }
+}
+//.select2-dropdown {
+//  border: 1px solid var(--line-3, #eaeaea);
+//  input {
+//    border: 1px solid var(--line-3, #eaeaea);
+//    border-radius: 8px;
+//    &:focus {
+//      outline: none;
+//    }
+//  }
+//}

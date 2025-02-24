@@ -1,0 +1,47 @@
+.Category {
+  padding-top: 56px;
+  padding-bottom: 30px;
+  @include media-breakpoint-down(md) {
+    padding: 30px 0;
+  }
+  &.has-bg {
+    background-color: #fee8bd;
+    background-image: url("../../images/image-bg-banner.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+  }
+  &-wrapper {
+    &.scroll-mobile{
+      .Category-wrapper-item{
+        @include media-breakpoint-down(md) {
+          width: 47%;
+        }
+      }
+    }
+    &-item {
+      width: calc(100% / 5);
+      padding: 0 15px;
+      @include media-breakpoint-down(md) {
+        width: 50%;
+      }
+      @include media-breakpoint-between(md, lg) {
+        width: calc(100% / 3);
+      }
+    }
+    &-category-item {
+      width: calc(100% / 9);
+      padding: 0 15px;
+      @include media-breakpoint-down(lg) {
+        width: calc(100% / 3);
+      }
+    }
+  }
+  .HeadingCard {
+    margin-bottom: 42px;
+    @include media-breakpoint-down(sm){
+      margin-bottom: 15px;
+    }
+  }
+}
