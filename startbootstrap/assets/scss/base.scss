@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+// variable
+$color-primary: rgb(30 48 243);
+$color-second: #e21e80;
+$color-btn: #212529;
+$color-text: rgb(0 0 0 / 55%);
+$color-text-2: #6c757d;
+$font-family: "Plus Jakarta Sans", serif;
+
+// Thiết lập mặc định
+* {
+    font-family: $font-family;
+    font-optical-sizing: auto;
+    // font-weight: 500;
+    font-style: normal;
+    box-sizing: border-box;
+    color: $color-text;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+svg {
+    vertical-align: middle;
+}
+
+// Base Container (Mobile First)
+.container {
+    width: 100%;
+    padding: 0 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+// Responsive mở rộng dần từ mobile -> tablet -> desktop
+@media (min-width: 576px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-family: $font-family;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    background-color: $color-primary;
+}
+
+.btn-primary {
+    border: 1px solid $color-primary;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: $color-btn;
+}
+
+//
+.py-1 {
+    padding: 1rem 0;
+}
+.py-2 {
+    padding: 2rem 0;
+}
+.py-3 {
+    padding: 3rem 0;
+}
+
+.px-1 {
+    padding: 0 1rem;
+}
+.px-1 {
+    padding: 0 2rem;
+}
+
+.px-3 {
+    padding: 0 3rem;
+}
+
+.my-3 {
+    margin: 3rem 0;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}

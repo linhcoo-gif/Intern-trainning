@@ -1,0 +1,203 @@
+@use "base" as *;
+
+// Header
+.header {
+    .header-start {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        .drop {
+            padding: 0.25rem 0.75rem;
+            cursor: pointer;
+            border-radius: 0.5rem;
+            font-size: 1.25rem;
+            border: none;
+            border: 1px $color-text solid;
+            line-height: 1;
+            background-color: white;
+        }
+
+        .header-logo {
+            font-weight: bold;
+            font-size: 20px;
+            color: $color-primary;
+        }
+    }
+
+    .header-menu {
+        padding: 0.5rem 0;
+        width: 100%;
+
+        .menu-item {
+            padding: 0.5rem 0;
+        }
+    }
+}
+// End Header
+
+// Section-2
+.section-2 {
+    padding: 4rem 0;
+
+    .content {
+        text-align: center;
+        width: 100%;
+        padding: 0 24px;
+
+        .inner-badge {
+            display: inline-block;
+
+            padding: 0.35rem 0.65rem;
+            font-weight: 700;
+            font-size: 0.75rem;
+            border-radius: 0.375em;
+            white-space: nowrap;
+            background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+            margin-bottom: 24px;
+            .text-uppercase {
+                color: white;
+                font-size: 12px;
+            }
+        }
+        .fw-light {
+            color: $color-text-2;
+            font-weight: 200;
+            font-size: calc(1.3rem + 0.6vw);
+        }
+
+        .online-growth {
+            font-weight: bolder;
+            font-size: calc(1.525rem + 3.3vw);
+            line-height: 1.2;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 3rem;
+            .text-gradient {
+                background: -webkit-linear-gradient(
+                    315deg,
+                    #1e30f3 0%,
+                    #e21e80 100%
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        .inner-btn {
+            display: flex;
+            flex-direction: column;
+
+            .ps-fix {
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .inner-img {
+        padding: 0 24px;
+        .inner-wrap {
+            position: relative;
+            height: 75vw;
+            width: 75vw;
+            border-radius: 5vw;
+            margin-top: 5vw;
+            max-height: 40rem;
+            max-width: 40rem;
+            background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+
+            .image {
+                height: 80vw;
+                max-height: 45rem;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .dots-1 {
+                position: absolute;
+                width: 3vw;
+                right: 1.5vw;
+                top: 4vw;
+                fill: white;
+            }
+
+            .dots-2 {
+                position: absolute;
+                width: 3vw;
+                right: -4vw;
+                top: 6.05vw;
+                fill: #1e30f3;
+            }
+
+            .dots-3 {
+                position: absolute;
+                width: 3vw;
+                left: 1.5vw;
+                bottom: 6.05vw;
+                fill: white;
+            }
+
+            .dots-4 {
+                position: absolute;
+                width: 3vw;
+                left: -4vw;
+                bottom: 4vw;
+                fill: #1e30f3;
+            }
+        }
+    }
+}
+// Section-2
+
+//contact
+.contact {
+    background-color: rgba(248, 249, 250);
+    .inner-title {
+        font-weight: bolder;
+        background: -webkit-linear-gradient(315deg, #1e30f3 0%, #e21e80 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 30px;
+    }
+
+    .inner-subtitle {
+        margin-bottom: 1.5rem;
+        font-weight: 200;
+        font-size: 1.25rem;
+    }
+
+    .inner-desc {
+        color: $color-text-2;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    .inner-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        font-size: 24px;
+        background: -webkit-linear-gradient(315deg, #1e30f3 0%, #e21e80 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+// end contact
+
+// footer
+.footer {
+    a {
+        text-decoration: underline;
+        color: #1e30f3;
+    }
+    display: flex;
+
+    .copy-right {
+        font-size: 0.875em;
+    }
+}
+// end footer

@@ -1,0 +1,106 @@
+@use "base" as *;
+
+// Responsive cho mobile (576px)
+@media (min-width: 575px) {
+}
+
+// Responsive cho tablet (768px)
+@media (min-width: 767px) {
+    .container {
+        max-width: 720px;
+        padding: 0 3rem;
+    }
+
+    .inner-btn {
+        flex-direction: row !important;
+        justify-content: center;
+        margin-bottom: 70px;
+    }
+    .btn {
+        padding: 15px 25px;
+        margin: 0 15px;
+    }
+
+    .section-2 {
+        .inner-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .inner-wrap {
+                height: 50vw !important;
+                width: 50vw !important;
+                .image {
+                    height: 55vw !important;
+                }
+            }
+        }
+    }
+
+    .footer {
+        .row {
+            justify-content: space-between;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 960px;
+        padding: 0 3rem;
+    }
+    .header {
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .header-start {
+            width: auto;
+        }
+        .drop {
+            display: none;
+        }
+
+        .header-menu {
+            width: auto;
+            display: flex;
+            .menu-item {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1320px;
+    }
+    .section-2 {
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .content {
+            width: 50%;
+            text-align: left;
+            .inner-btn {
+                justify-content: flex-start;
+            }
+        }
+        .inner-img {
+            width: 50%;
+        }
+    }
+
+    .contact {
+        .inner-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .inner-desc {
+            width: calc(2 / 3 * 100%);
+        }
+    }
+}
