@@ -9,6 +9,10 @@ import certified from '../assets/certified.png'
 import Btn from '../assets/btn.png'
 import { dataAnswers, dataSlides, introductionData, LogoData } from '../data/mockData';
 import RegisterForm from '../components/RegisterForm';
+import Box from '../components/Box';
+import avatarMember from "../assets/member_avatar.png"
+import avatarMember2 from "../assets/menberAvata_2.png"
+
 
 function Content() {
   const title = "FLYER LÀ GÌ? 3 GIÁ TRỊ FLYER MANG LẠI CHO CON?"
@@ -23,57 +27,70 @@ function Content() {
   }
 
   return (
-    <div className="flex flex-col gap-20 bg-bg-rgb">
-      <Introduction
-        title={title}
-        textBtn={"Click me"}
-        text={text}
-        img={frameBorder}
-        revert={true}
-        gif={gif}
-      />
-
-      <Card />
-
-      <Grid
-        title={titleLogoComponent}
-        data={LogoData} />
-
-      <Slides data={dataSlides} />
-
-      <ShowImage
-        revert={true}
-        img={certified}
-        textContent={textContent}
-        title="ĐẠT CHUẨN CHẤT LƯỢNG GIÁO DỤC QUỐC TẾ CỦA PHẦN LAN"
-      />
-
-      <ShowImage
-        title={"LỘ TRÌNH CHUẨN ĐƯỢC NGHIÊN CỨU BỞI CAMBRIDGE & TOEFL"}
-        img={LogoImage}
-        textContent={"Lộ trình học tiêu chuẩn của FLYER được thiết kế dựa trên Khung tham chiếu Ngôn ngữ chung châu Âu (CEFR) và các giáo trình uy tín của Cambridge, TOEFL và Bộ Giáo dục Việt Nam."}
-      />
-
-      {introductionData.map((el) => (
+    <div className="flex flex-col justify-center items-center bg-bg-rgb">
+      <div className='max-w-[1200px] flex flex-col gap-20'>
         <Introduction
-          key={el.id}
-          backgroundImg={Btn}
-          id={el.id}
-          revert={el.revert}
-          img={el.image}
-          video={el.video}
-          subTitle={el.title}
-          text={el.content}
-          btn={el.btn}
-          textBtn={el.textBtn}
-          gif={el.gif}
-          handleClick={() => handleBtnClick(el.id)}
+          title={title}
+          textBtn={"Click me"}
+          text={text}
+          img={frameBorder}
+          revert={true}
+          gif={gif}
         />
-      ))}
-      <RegisterForm
-        data={dataAnswers}
-        title={"ĐĂNG KÝ NHẬN ƯU ĐÃI SIÊU TIẾT KIỆM TỪ FLYER"}
-        hotline={"Cần hỗ trợ gấp, vui lòng liên hệ hotline Zalo 0965376466"} />
+        <Card />
+        <Grid
+          title={titleLogoComponent}
+          data={LogoData} />
+        <Slides data={dataSlides} />
+        <ShowImage
+          revert={true}
+          img={certified}
+          textContent={textContent}
+          title="ĐẠT CHUẨN CHẤT LƯỢNG GIÁO DỤC QUỐC TẾ CỦA PHẦN LAN"
+        />
+        <ShowImage
+          title={"LỘ TRÌNH CHUẨN ĐƯỢC NGHIÊN CỨU BỞI CAMBRIDGE & TOEFL"}
+          img={LogoImage}
+          textContent={"Lộ trình học tiêu chuẩn của FLYER được thiết kế dựa trên Khung tham chiếu Ngôn ngữ chung châu Âu (CEFR) và các giáo trình uy tín của Cambridge, TOEFL và Bộ Giáo dục Việt Nam."}
+        />
+        {introductionData.map((el) => (
+          <Introduction
+            key={el.id}
+            backgroundImg={Btn}
+            id={el.id}
+            revert={el.revert}
+            img={el.image}
+            video={el.video}
+            subTitle={el.title}
+            text={el.content}
+            btn={el.btn}
+            textBtn={el.textBtn}
+            gif={el.gif}
+            handleClick={() => handleBtnClick(el.id)}
+          />
+        ))}
+        <RegisterForm
+          data={dataAnswers}
+          title={"ĐĂNG KÝ NHẬN ƯU ĐÃI SIÊU TIẾT KIỆM TỪ FLYER"}
+          hotline={"Cần hỗ trợ gấp, vui lòng liên hệ hotline Zalo 0965376466"} />
+        <div className='text-center text-white font-bold text-[3rem]'>PHẢN HỒI CỦA PHỤ HUYNH, THẦY CÔ</div>
+        <Box
+          img={frameBorder}
+          avatarMember={avatarMember}
+          video={"https://www.youtube.com/embed/qsQqN9oeTpc"}
+          nameMember={"CHỊ PHAN HỒ ĐIỆP"}
+          decription={"Mẹ thần đồng Đỗ Nhật Nam"}
+          content={"Đây quả thực là một bí quyết giúp các con lấy chứng chỉ Cambridge, TOEFL Primary dễ dàng."}
+        />
+        <Box
+          img={frameBorder}
+          avatarMember={avatarMember2}
+          video={"https://www.youtube.com/embed/h03qjjn3gH4"}
+          nameMember={"CHỊ HỒNG ĐINH"}
+          decription={"Thạc sĩ giáo dục tại Mỹ"}
+          content={"Học và ôn luyện không còn là việc nhàm chán, căng thẳng, thiếu động lực. Học sinh hứng thú học & luyện thi tiếng Anh hơn cả."}
+        />
+      </div>
     </div>
   );
 }

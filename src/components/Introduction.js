@@ -3,13 +3,13 @@ function Introduction({ title, subTitle, text, img, video, revert, gif, btn, han
 
   return (
     <div className=" flex justify-center items-center">
-      <div className="flex flex-col justify-center items-center max-w-[1200px]">
-        <h1 className="font-bold text-white text-center text-[3rem]">{title}</h1>
+      <div className="flex flex-col justify-center items-center gap-10">
+        <div className="font-bold text-white text-center text-[3rem]">{title}</div>
         {revert ?
           <div>
             <div className="grid grid-cols-2 justify-center items-center gap-[50px]">
               <div className=" flex gap-5 flex-col justify-center">
-                <h1 className="text-white text-[2rem] font-semibold text-center">{subTitle}</h1>
+                <div className="text-white text-[2rem] font-semibold text-center">{subTitle}</div>
                 <div>
                   <p className="text-white break-words text-lg">{text}</p>
                 </div>
@@ -53,7 +53,7 @@ function Introduction({ title, subTitle, text, img, video, revert, gif, btn, han
                   ></iframe>}
               </div>
               <div className=" flex gap-5 flex-col justify-center">
-                <h1 className="text-white text-[2rem] font-semibold text-center">{subTitle}</h1>
+                <div className="text-white text-[2rem] font-semibold text-center">{subTitle}</div>
                 <div>
                   <p className="text-white break-words text-lg">{text}</p>
                 </div>

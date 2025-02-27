@@ -7,9 +7,9 @@ import appStore from '../assets/appstore.png'
 import googlePlay from '../assets/googleplay.png'
 function Footer() {
   return (
-    <div className='flex justify-center items-center' style={{ backgroundImage: `url('${bgFooter}')`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+    <div className='flex justify-center items-center' style={{ backgroundImage: `url('${bgFooter}')`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: "center" }}>
       <div className='w-[1200px] flex flex-col'>
-        <div className='w-[100px]'>
+        <div className='w-[150px]'>
           <img src={logo} alt='flyer_logo' />
         </div>
         <div className='grid grid-cols-2 gap-5'>
