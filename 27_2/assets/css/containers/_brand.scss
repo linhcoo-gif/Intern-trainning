@@ -1,0 +1,15 @@
+.brand{
+    padding-top: 3rem ;
+    padding-bottom: 3rem ;
+    >.container > *{
+        padding-right: calc(1.5rem* 0.5);
+        padding-left: calc(1.5rem * 0.5);
+        text-align: center;
+        width: 100%;
+        margin-top: 1rem ;
+        margin-bottom: 1rem ;
+    }
+    img{
+        height: 2.75rem;
+    }
+}
