@@ -1,17 +1,20 @@
+import Btn from '../assets/btn.png';
+import certified from '../assets/certified.png';
 import frameBorder from '../assets/frame-border.png';
 import LogoImage from '../assets/lo_trinh_image.png';
+import avatarMember from "../assets/member_avatar.png";
+import avatarMember2 from "../assets/menberAvata_2.png";
+import Box from '../components/Box';
 import Card from '../components/Card';
+import CardMember from '../components/CardMember';
 import Grid from '../components/Grid';
 import Introduction from '../components/Introduction';
+import RegisterForm from '../components/RegisterForm';
 import ShowImage from '../components/ShowImage';
 import Slides from '../components/Slider';
-import certified from '../assets/certified.png'
-import Btn from '../assets/btn.png'
-import { dataAnswers, dataSlides, introductionData, LogoData } from '../data/mockData';
-import RegisterForm from '../components/RegisterForm';
-import Box from '../components/Box';
-import avatarMember from "../assets/member_avatar.png"
-import avatarMember2 from "../assets/menberAvata_2.png"
+import { Screen } from '../components/Screen';
+import { dataAnswers, dataScreen, dataSlides, introductionData, LogoData } from '../data/mockData';
+import News from './News';
 
 
 function Content() {
@@ -28,7 +31,7 @@ function Content() {
 
   return (
     <div className="flex flex-col justify-center items-center bg-bg-rgb">
-      <div className='max-w-[1200px] flex flex-col gap-20'>
+      <div className='max-w-[1200px] flex flex-col gap-[50px] mt-10 mb-10'>
         <Introduction
           title={title}
           textBtn={"Click me"}
@@ -90,6 +93,18 @@ function Content() {
           decription={"Thạc sĩ giáo dục tại Mỹ"}
           content={"Học và ôn luyện không còn là việc nhàm chán, căng thẳng, thiếu động lực. Học sinh hứng thú học & luyện thi tiếng Anh hơn cả."}
         />
+        <CardMember />
+        <div className='flex gap-5'>
+          {dataScreen.map((item) => (
+            <Screen
+              key={item.id}
+              img={frameBorder}
+              video={item.video}
+              title={item.title}
+            />
+          ))}
+        </div>
+        <News />
       </div>
     </div>
   );

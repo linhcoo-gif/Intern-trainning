@@ -1,17 +1,18 @@
-import Button from './Button';
+import Button from "./Button";
+
 function Introduction({ title, subTitle, text, img, video, revert, gif, btn, handleClick, backgroundImg }) {
 
   return (
     <div className=" flex justify-center items-center">
-      <div className="flex flex-col justify-center items-center gap-10">
-        <div className="font-bold text-white text-center text-[3rem]">{title}</div>
+      <div className="flex flex-col justify-center items-center gap-[20px]">
+        <div className="font-bold text-white text-center text-[40px]">{title}</div>
         {revert ?
           <div>
             <div className="grid grid-cols-2 justify-center items-center gap-[50px]">
               <div className=" flex gap-5 flex-col justify-center">
-                <div className="text-white text-[2rem] font-semibold text-center">{subTitle}</div>
+                <div className="text-white text-[30px] font-bold text-center">{subTitle}</div>
                 <div>
-                  <p className="text-white break-words text-lg">{text}</p>
+                  <p className="text-white break-words text-[23.6px]">{text}</p>
                 </div>
                 {btn && (
                   <div className="flex justify-center">
@@ -53,9 +54,9 @@ function Introduction({ title, subTitle, text, img, video, revert, gif, btn, han
                   ></iframe>}
               </div>
               <div className=" flex gap-5 flex-col justify-center">
-                <div className="text-white text-[2rem] font-semibold text-center">{subTitle}</div>
+                <div className="text-white text-[30px] font-bold text-center">{subTitle}</div>
                 <div>
-                  <p className="text-white break-words text-lg">{text}</p>
+                  <p className="text-white break-words text-[23.6px]">{text}</p>
                 </div>
                 {btn && (
                   <div className="flex justify-center ">

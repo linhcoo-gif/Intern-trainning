@@ -1,9 +1,9 @@
 import Background from "../assets/background-header.png";
 import Border from '../assets/frame-border.png';
 import Logo from '../assets/Logo.png';
-import Button from "../components/Button";
-import Navbar from "../components/Navbar";
 import Btn from "../assets/btn.png"
+import Navbar from "../components/Navbar";
+import Button from "../components/Button";
 function Header() {
   const title = "Học & Luyện Chứng Chỉ Tiếng Anh"
 
@@ -26,6 +26,9 @@ function Header() {
           <div className="btn w-[400px] flex flex-col gap-[25px]">
             <Button backgroundImg={Btn} text="Dành Cho Phụ Huynh/Học Sinh" handleOnclick={handleClick} />
             <Button backgroundImg={Btn} text="Dành Cho Giáo Viên/Trường " />
+            <div className="font-bold text-[19.32px] text-center text-white  ">
+              Đã có tài khoản?<a className="font-bold text-login-btn underline underline-offset" href="aaa" target="blank">Đăng nhập</a>
+            </div>
           </div>
 
           <div>

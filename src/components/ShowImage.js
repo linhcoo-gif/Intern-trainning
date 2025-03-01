@@ -12,7 +12,7 @@ function ShowImage({ title, revert, img, textContent }) {
           <img src={img} alt="#" />
         </div>
       </div> : <div>
-        <div className="grid grid-cols-2 items-center text-white text-center">
+        <div className="grid grid-cols-2 gap-10 items-center text-white text-center">
           <div>
             <img src={img} alt="#" />
           </div>

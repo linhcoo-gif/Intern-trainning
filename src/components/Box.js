@@ -3,12 +3,11 @@ function Box({ img, video, nameMember, decription, content, avatarMember, headLi
     <div className="relative">
       <img src={img} alt="border" />
       <iframe
-        className="absolute top-[2em] left-[2em] w-[28em] h-[15em]"
+        className="absolute top-[2em] left-[2em] w-[29em] h-[15em]"
         src={video}
         title="Chị Điệp Mẹ Nhật Nam Đánh Giá Phòng Luyện Thi Ảo FLYER.VN"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen></iframe>
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen></iframe>
     </div>
     <div className="flex flex-col gap-10 text-indigo-900">
       <div className="flex">
@@ -26,3 +25,7 @@ function Box({ img, video, nameMember, decription, content, avatarMember, headLi
 }
 
 export default Box;
+
+
+
+

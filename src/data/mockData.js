@@ -58,18 +58,18 @@ export const dataSlides = [
 ]
 
 export const LogoData = [
-  { id: 1, logo: "/logo/log_3.png" },
-  { id: 2, logo: "/logo/log_3.png", },
-  { id: 3, logo: "/logo/log_3.png", },
-  { id: 4, logo: "/logo/log_3.png", },
-  { id: 5, logo: "/logo/log_3.png", },
-  { id: 6, logo: "/logo/log_3.png", },
-  { id: 7, logo: "/logo/log_3.png" },
-  { id: 8, logo: "/logo/log_3.png", },
-  { id: 9, logo: "/logo/log_3.png", },
-  { id: 10, logo: "/logo/log_3.png", },
-  { id: 11, logo: "/logo/log_3.png", },
-  { id: 12, logo: "/logo/log_3.png", },
+  { id: 1, logo: "/logo/logo_3.png" },
+  { id: 2, logo: "/logo/logo_1.png", },
+  { id: 3, logo: "/logo/logo_2.png", },
+  { id: 4, logo: "/logo/logo_1.png", },
+  { id: 5, logo: "/logo/logo_2.png", },
+  { id: 6, logo: "/logo/logo_3.png", },
+  { id: 7, logo: "/logo/logo_2.png" },
+  { id: 8, logo: "/logo/logo_1.png", },
+  { id: 9, logo: "/logo/logo_3.png", },
+  { id: 10, logo: "/logo/logo_3.png", },
+  { id: 11, logo: "/logo/logo_2.png", },
+  { id: 12, logo: "/logo/logo_1.png", },
 ]
 
 export const cardData = [
@@ -108,4 +108,9 @@ export const dataAnswers = [
     title: "Lộ trình Cambridge",
     list: ["1. Starters (Pre A1)", "2. Movers (A1) ", "3. Flyers (A2) ", "4. KET (A2) "]
   }
+]
+
+export const dataScreen = [
+  { id: 1, video: "https://www.youtube.com/embed/h03qjjn3gH4", title: "VTV đưa tin về FLYER đạt chuẩn quốc tế" },
+  { id: 2, video: "https://www.youtube.com/embed/RKWYAtA6EG0", title: "THCS Nguyễn Văn Trỗi áp dụng FLYER" }
 ]
