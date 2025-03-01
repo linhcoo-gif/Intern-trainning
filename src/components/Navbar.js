@@ -10,7 +10,7 @@ function Navbar() {
   ]
 
   return (
-    <div className="md:w-3/4 fixed z-[99999] flex justify-center gap-10 top-0">
+    <div className="w-full fixed z-[99999] flex justify-center gap-10 top-0">
       <div className="relative flex items-center">
         <img src={navbar} alt="#" />
         <div className="absolute flex gap-10 top-3 left-10">

@@ -1,8 +1,7 @@
 import Background from "../assets/background-header.png";
+import Btn from "../assets/btn.png";
 import Border from '../assets/frame-border.png';
 import Logo from '../assets/Logo.png';
-import Btn from "../assets/btn.png"
-import Navbar from "../components/Navbar";
 import Button from "../components/Button";
 function Header() {
   const title = "Học & Luyện Chứng Chỉ Tiếng Anh"
@@ -14,7 +13,6 @@ function Header() {
   return (
     <div className="flex justify-center h-[900px]" style={{ backgroundImage: `url(${Background})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
       <div className="flex justify-center items-center flex-col">
-        <Navbar />
         <div className="Logo mt-[5em] w-[334.636px] flex flex justify-center items-center flex-col">
           <img src={Logo} alt="Logo" />
         </div>
