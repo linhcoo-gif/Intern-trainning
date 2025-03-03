@@ -4,28 +4,26 @@ import Border from '../assets/frame-border.png';
 import Logo from '../assets/Logo.png';
 import Button from "../components/Button";
 function Header() {
-  const title = "Học & Luyện Chứng Chỉ Tiếng Anh"
-
   const handleClick = () => {
     console.log(`Clicked`);
   }
 
   return (
-    <div className="flex justify-center h-[900px]" style={{ backgroundImage: `url(${Background})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
+    <div className="flex justify-center h-[1000px]" style={{ backgroundImage: `url(${Background})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
       <div className="flex justify-center items-center flex-col">
         <div className="Logo mt-[5em] w-[334.636px] flex flex justify-center items-center flex-col">
           <img src={Logo} alt="Logo" />
         </div>
-        <div className="title text-center font-bold text-white text-[56.69px]">
-          <p>{title}</p>
+        <div className="title text-center font-bold text-white text-[56.69px] max-w-[1200px]">
+          <p>Learn & Master Mathematics Through Engaging Adventures</p>
         </div>
 
         <div className=" header-content gap-[5em] w-full flex justify-center items-center relative">
           <div className="btn w-[400px] flex flex-col gap-[25px]">
-            <Button backgroundImg={Btn} text="Dành Cho Phụ Huynh/Học Sinh" handleOnclick={handleClick} />
-            <Button backgroundImg={Btn} text="Dành Cho Giáo Viên/Trường " />
+            <Button backgroundImg={Btn} text="For Parents & Students" handleOnclick={handleClick} />
+            <Button backgroundImg={Btn} text="For Teachers & Schools" />
             <div className="font-bold text-[19.32px] text-center text-white  ">
-              Đã có tài khoản?<a className="font-bold text-login-btn underline underline-offset" href="aaa" target="blank">Đăng nhập</a>
+              Already have an account?<a className="font-bold text-login-btn underline underline-offset" href="aaa" target="blank">Log in</a>
             </div>
           </div>
 

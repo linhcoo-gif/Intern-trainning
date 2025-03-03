@@ -15,15 +15,21 @@ import Slides from '../components/Slider';
 import { Screen } from '../components/Screen';
 import { dataAnswers, dataScreen, dataSlides, introductionData, LogoData } from '../data/mockData';
 import News from './News';
+import { useTranslation } from "react-i18next";
 
 
 function Content() {
-  const title = "FLYER LÀ GÌ? 3 GIÁ TRỊ FLYER MANG LẠI CHO CON?"
-  const text = "Nền tảng học & ôn luyện chứng chỉ tiếng Anh đa tương tác, kết hợp giữa các yếu tố học thuật, công nghệ, đồ hoạ và trò chơi hoá (gamification), giúp học sinh tìm thấy cảm hứng rèn luyện để tiến bộ qua từng bài tập và chinh phục các chứng chỉ quốc tế."
+  const text = "Mathscrit is an interactive platform designed to enhance Maths learning by combining academic principles, technology, graphics, and gamification. It inspires students to progress through engaging challenges and exercises, ultimately helping them master mathematical skills at their own pace."
   const gif = "https://w.ladicdn.com/629734dc474010008138d6f5/czhdmwvvv520240823054449.gif"
   const titleLogoComponent = "600,000++ HỌC SINH, THẦY CÔ VÀ TRƯỜNG QUỐC TẾ TIN DÙNG FLYER"
   const textContent = "EAF đánh giá chương trình học của FLYER đáp ứng tốt các tiêu chuẩn chất lượng quốc tế khắt khe theo 3 tiêu chí : Mục tiêu học tập, Phương pháp sư phạm & Tính tương tác của sản phẩm, với sự tham gia của những chuyên gia hàng đầu trong lĩnh vực giáo dục tại Phần Lan."
+  const content = "Mathscrit is an interactive platform designed to enhance Maths learning by combining academic principles, technology, graphics, and gamification. It inspires students to progress through engaging challenges and exercises, ultimately helping them master mathematical skills at their own pace."
 
+  const { t } = useTranslation();
+
+  // const changeLanguage = (lng) => {
+  //   i18n.changeLanguage(lng)
+  // }
 
   const handleBtnClick = (id) => {
     console.log("show id", id);
@@ -32,19 +38,31 @@ function Content() {
   return (
     <div className="flex flex-col justify-center items-center bg-bg-rgb">
       <div className='max-w-[1200px] flex flex-col gap-[50px] mt-10 mb-10'>
+        <div>
+          <h1>
+            <div>{t('TITLE.WELCOME')}</div>
+            {/* <button onClick={() => changeLanguage("vi")}>Cick me to change languages!</button> */}
+          </h1>
+        </div>
         <Introduction
-          title={title}
+          title={"What is Mathscrit? 3 Key Benefits for Students"}
           textBtn={"Click me"}
           text={text}
           img={frameBorder}
           revert={true}
           gif={gif}
+          content={content}
         />
         <Card />
         <Grid
           title={titleLogoComponent}
           data={LogoData} />
-        <Slides data={dataSlides} />
+        <div className='flex flex-col gap-10'>
+          <div className='text-center text-white text-[40px] font-bold '>
+            Mathscrit Hall of Legends
+          </div>
+          <Slides data={dataSlides} />
+        </div>
         <ShowImage
           revert={true}
           img={certified}
@@ -52,9 +70,9 @@ function Content() {
           title="ĐẠT CHUẨN CHẤT LƯỢNG GIÁO DỤC QUỐC TẾ CỦA PHẦN LAN"
         />
         <ShowImage
-          title={"LỘ TRÌNH CHUẨN ĐƯỢC NGHIÊN CỨU BỞI CAMBRIDGE & TOEFL"}
+          title={"A Research-Backed Learning Pathway"}
           img={LogoImage}
-          textContent={"Lộ trình học tiêu chuẩn của FLYER được thiết kế dựa trên Khung tham chiếu Ngôn ngữ chung châu Âu (CEFR) và các giáo trình uy tín của Cambridge, TOEFL và Bộ Giáo dục Việt Nam."}
+          textContent={"The structured learning journey in Mathscrit is designed based on international mathematics frameworks and trusted educational curricula. It aligns with global math standards, ensuring students receive a high-quality and effective learning experience."}
         />
         {introductionData.map((el) => (
           <Introduction
@@ -65,7 +83,8 @@ function Content() {
             img={el.image}
             video={el.video}
             subTitle={el.title}
-            text={el.content}
+            content={el.content}
+            list={el.list}
             btn={el.btn}
             textBtn={el.textBtn}
             gif={el.gif}

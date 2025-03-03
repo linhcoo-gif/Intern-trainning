@@ -4,41 +4,57 @@ import sliderImage from '../assets/slider_img.jpg';
 export const introductionData = [
   {
     id: "1",
-    title: "[Mới] Nói Với Siêu AI",
+    title: "[New] Train with AI-Powered Math Mentor",
     image: imageBorder,
     video: "https://www.youtube.com/embed/RKWYAtA6EG0",
-    content: "☆ Tự động chấm, chữa chi tiết theo 3 tiêu chí: Từ vựng & ngữ pháp, Phát âm & Phản hồi ☆ Sửa phát âm cho con đến từng âm vị ☆ Cọ sát với đề thi thử Nói Starters, Movers, Flyers",
-    textBtn: "Thử Speaking AI",
+    list: [
+      "☆ Instant feedback and detailed corrections based on three key criteria: problem-solving accuracy, logical reasoning, and conceptual understanding.",
+      "☆ Step-by-step guidance to improve mathematical thinking, with AI analyzing solutions in real time.",
+      "☆ Practice with interactive problem sets tailored to different skill levels, from foundational to advanced challenges."
+    ],
+    textBtn: "Try AI-Powered Math Practice",
     revert: true,
     btn: true
   },
   {
     id: "2",
-    title: "[Mới] Nói Với Siêu AI",
+    title: "Gamified Math Challenges",
     image: imageBorder,
     video: "https://www.youtube.com/embed/RKWYAtA6EG0",
-    content: "☆ Tự động chấm, chữa chi tiết theo 3 tiêu chí: Từ vựng & ngữ pháp, Phát âm & Phản hồi ☆ Sửa phát âm cho con đến từng âm vị ☆ Cọ sát với đề thi thử Nói Starters, Movers, Flyers",
-    textBtn: "Thử Speaking AI",
+    list: [
+      "☆ 300+ interactive exercises, designed to mirror real-world math problems while incorporating game mechanics for an exciting learning experience.",
+      "☆ Diverse and engaging features, including friendly challenges, mini-games, and leaderboards, making every learning session more exciting and immersive."
+    ],
+    textBtn: "Try for Free",
     revert: false,
     btn: true
   },
   {
     id: "3",
-    title: "[Mới] Nói Với Siêu AI",
+    title: "Skill Assessment & Progress Tracking",
     image: imageBorder,
     video: "https://www.youtube.com/embed/RKWYAtA6EG0",
-    content: "☆ Tự động chấm, chữa chi tiết theo 3 tiêu chí: Từ vựng & ngữ pháp, Phát âm & Phản hồi ☆ Sửa phát âm cho con đến từng âm vị ☆ Cọ sát với đề thi thử Nói Starters, Movers, Flyers",
-    textBtn: "Thử Speaking AI",
+    list: [
+      "☆ Three adaptive tests tailored for different age groups to accurately assess students' math proficiency.",
+      "☆ Instant grading and skill classification, helping learners track their progress immediately.",
+      "☆ Automatic progress tracking, enabling students and parents to monitor improvements over time."
+    ],
+    textBtn: "Take the Skill Test",
     revert: true,
     btn: true
   },
   {
     id: "4",
-    title: "[Mới] Nói Với Siêu AI",
+    title: "Quick Math Practice in 5-10 Minutes",
     image: imageBorder,
     video: "https://www.youtube.com/embed/RKWYAtA6EG0",
-    content: "☆ Tự động chấm, chữa chi tiết theo 3 tiêu chí: Từ vựng & ngữ pháp, Phát âm & Phản hồi ☆ Sửa phát âm cho con đến từng âm vị ☆ Cọ sát với đề thi thử Nói Starters, Movers, Flyers",
-    textBtn: "Thử Speaking AI",
+    list: [
+      "☆ Focus on specific skills or areas of difficulty to strengthen weak points.",
+      "☆ Develop a consistent daily math learning habit through short, engaging sessions.",
+      "☆ Practice anytime, anywhere, making math revision convenient and effective.",
+      "☆ Prepare efficiently for exams and challenges with targeted exercises."
+    ],
+    textBtn: "Start Practicing Now",
     revert: false,
     btn: true
   }

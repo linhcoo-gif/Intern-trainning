@@ -1,8 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import HomePage from './pages/HomePage';
-
-
+import "./i18n"
 function App() {
   return (
     <Router>

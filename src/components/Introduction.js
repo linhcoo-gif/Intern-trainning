@@ -1,6 +1,6 @@
 import Button from "./Button";
 
-function Introduction({ title, subTitle, text, img, video, revert, gif, btn, handleClick, backgroundImg }) {
+function Introduction({ title, subTitle, content, img, video, revert, gif, btn, handleClick, backgroundImg, list, textBtn }) {
 
   return (
     <div className=" flex justify-center items-center">
@@ -12,15 +12,21 @@ function Introduction({ title, subTitle, text, img, video, revert, gif, btn, han
               <div className=" flex gap-5 flex-col justify-center">
                 <div className="text-white text-[30px] font-bold text-center">{subTitle}</div>
                 <div>
-                  <p className="text-white break-words text-[23.6px]">{text}</p>
+                  {list ? <div>
+                    {list.map((item, index) => (
+                      <p className="text-white text-[17.51px]" key={index}>{item}</p>
+                    ))}
+                  </div> :
+                    <p className="text-white break-words text-[23.6px]">{content}</p>
+                  }
                 </div>
                 {btn && (
                   <div className="flex justify-center">
-                    <div className='w-[20rem]'>
+                    <div className='w-[20rem] text-center'>
                       <Button
                         handleOnclick={handleClick}
                         backgroundImg={backgroundImg}
-                        text="Thử Speaking AI" />
+                        text={textBtn} />
                     </div>
                   </div>
                 )}
@@ -56,7 +62,13 @@ function Introduction({ title, subTitle, text, img, video, revert, gif, btn, han
               <div className=" flex gap-5 flex-col justify-center">
                 <div className="text-white text-[30px] font-bold text-center">{subTitle}</div>
                 <div>
-                  <p className="text-white break-words text-[23.6px]">{text}</p>
+                  {list ? <div>
+                    {list.map((item, index) => (
+                      <p className="text-white text-[17.51px]" key={index}>{item}</p>
+                    ))}
+                  </div> :
+                    <p className="text-white break-words text-[23.6px]">{content}</p>
+                  }
                 </div>
                 {btn && (
                   <div className="flex justify-center ">
@@ -64,7 +76,7 @@ function Introduction({ title, subTitle, text, img, video, revert, gif, btn, han
                       <Button
                         handleOnclick={handleClick}
                         backgroundImg={backgroundImg}
-                        text="Thử Speaking AI" />
+                        text={textBtn} />
                     </div>
                   </div>
                 )}

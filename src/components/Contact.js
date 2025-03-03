@@ -2,7 +2,7 @@ import Phone from '../assets/phone.png';
 import FB from '../assets/facebook.png'
 import Zalo from '../assets/zalo.png'
 function Contact() {
-  return (<div className="flex flex-col tetx-white fixed bottom-5 right-[180px] text-white gap-2">
+  return (<div className="flex z-[99999] flex-col tetx-white fixed bottom-5 right-[160px] text-white gap-2">
     <a href="tel:0965376466">
       <div className='w-[50px]'>
         <img src={Phone} alt='' />
