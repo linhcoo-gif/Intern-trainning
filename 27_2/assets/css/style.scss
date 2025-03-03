@@ -1,2 +1,14 @@
+
+@import './bootstrap-5.3.3/scss/bootstrap.scss';
 @import 'components/components';
 @import 'containers/containers';
+
+
+html,body
+   {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: auto; 
+    }

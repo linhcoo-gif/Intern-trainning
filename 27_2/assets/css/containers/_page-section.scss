@@ -3,24 +3,6 @@
 }
 
 .page-section {
-    .container {
-        display: block;
-        @media (min-width: 576px) {
-                max-width: 540px;
-        }
-        @media (min-width: 768px) {
-                max-width: 720px;
-        }
-        @media (min-width: 992px) {
-                max-width: 960px;
-        }
-        @media (min-width: 1200px) {
-                max-width: 1140px;
-        }
-        @media (min-width: 1400px) {
-                max-width: 1320px;
-        }
-    }
 
     padding: 6rem 0;
 
@@ -45,14 +27,7 @@
     }
 
     &-row {
-        margin-right: calc(-0.5* 1.5rem);
-        margin-left: calc(-0.5* 1.5rem);
-        font-size: 4em;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        &-col-4 {
+        &-col {
             display: flex;
             align-items: center;
             text-align: center;
@@ -64,10 +39,6 @@
             padding-left: calc((1.5rem)* 0.5);
             margin-top: 0;
 
-            @media (min-width: 768px) {
-                flex: 0 0 auto;
-                width: 33.33333333%;
-            }
 
             &-icon {
                 display: flex;
@@ -75,7 +46,8 @@
                 height: 2em;
                 background-color: $primary;
                 border-radius: 50%;
-                font-size: 4rem;  
+                font-size: 4rem;
+
                 i {
                     color: $white;
                     margin: auto;
@@ -144,8 +116,9 @@
                         align-items: center;
                         justify-content: center;
                         opacity: 0;
-                        
+
                         transition: opacity ease-in-out 0.25s;
+
                         i {
                             color: white;
                         }
@@ -181,16 +154,11 @@
 
         }
 
-        &-col-lg-4 {
+        &-col-lg {
 
             text-align: center;
             margin-bottom: 3rem;
             width: 100%;
-
-            @media (min-width: 992px) {
-                flex: 0 0 auto;
-                width: 33.33333333%;
-            }
 
             h4 {
                 font-size: calc(1.275rem + 0.3vw);
@@ -205,6 +173,7 @@
 
             .social {
                 a {
+                    color: $black;
                     text-decoration: none;
                     height: 2.5rem;
                     width: 2.5rem;
@@ -235,6 +204,7 @@
 
     &-list {
         position: relative;
+        padding-left: 0;
 
         &-image {
             position: absolute;
@@ -248,9 +218,34 @@
                 margin-left: -50px;
             }
 
+            @media (min-width: 992px) {
+                width: 150px;
+                height: 150px;
+                margin-left: -75px;
+            }
+
+
+            @media (min-width: 1200px) {
+                width: 170px;
+                height: 170px;
+                margin-left: -85px;
+            }
+
+
             &-circle {
                 width: 100%;
                 height: 100%;
+            }
+
+            &.last {
+                position: absolute;
+                z-index: 100;
+                text-align: center;
+                color: white;
+                border: 7px solid #e9ecef;
+                border-radius: 100%;
+                background-color: #ffc800;
+
             }
         }
 
@@ -275,11 +270,13 @@
             clear: both;
 
             &.right {
-                display: flex;
-                flex-direction: row-reverse;
+                @media (min-width: 768px) {
+                    display: flex;
+                    flex-direction: row-reverse;
 
-                .page-section-list-item-text-panel {
-                    text-align: left;
+                    .page-section-list-item-text-panel {
+                        text-align: left;
+                    }
                 }
             }
 
@@ -296,19 +293,15 @@
                     padding: 0 20px 20px 30px;
                     text-align: right;
                 }
-
                 &-time,
                 &-heading {
                     font-size: calc(1.275rem + 0.3vw);
                     font-weight: 700;
                 }
-
                 &-text {
                     color: $grey;
                     line-height: 1.75;
                     margin-bottom: 1rem;
-                    padding-left: 1.5rem;
-                    padding-right: 1.5rem;
                 }
             }
         }
@@ -326,24 +319,18 @@
             color: $white;
         }
     }
-
-    .page-section-form-group-input-small{   
-        width: 100%;
-    }
-
     .page-section-form-group-input-big {
-        width: 100%;
-        input{
+        input {
             min-height: 10rem;
             display: block;
             height: 100%;
-            padding: 10px 0 190px 20px ; 
+            padding: 10px 0 190px 20px;
         }
     }
 }
 
 
-.contact-form{
+.contact-form {
     margin-top: 50px;
     display: flex;
     justify-content: center;

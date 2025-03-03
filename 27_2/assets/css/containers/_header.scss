@@ -6,13 +6,11 @@
     width: 100%;
     z-index: 1000;
 
-    .container {
-        justify-content: space-between;
-        display: flex;
+    &-content {
+        flex-wrap: wrap;
 
         @media (min-width: 992px) {
             flex-wrap: nowrap;
-
         }
     }
 
@@ -55,23 +53,35 @@
             ul {
                 display: flex;
                 flex-direction: row;
-
                 justify-content: end;
             }
         }
 
         &-list {
+            padding-left: 0;
             list-style-type: none;
-            padding-top: 1.5rem !important;
-            padding-bottom: 1.5rem !important;
-
+            margin-bottom: 0;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            @media (min-width: 992px) {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
             &-item {
                 padding: 0.5rem 0;
                 margin-right: 1rem;
+
                 a {
+                    padding-right: 0.5rem;
+                    padding-left: 0.5rem;
+                    letter-spacing: 0.0625em;
                     text-decoration: none;
                     color: $white;
                     padding: 0.5rem 0;
+                    @media (min-width: 992px) {
+                            padding-right: 0.5rem;
+                            padding-left: 0.5rem;
+                    }
                 }
             }
         }
