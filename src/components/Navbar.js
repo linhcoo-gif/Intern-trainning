@@ -1,6 +1,7 @@
 import navbar from "../assets/navbar.png";
 import Btn from '../assets/btn.png';
 import Button from "./Button";
+import i18n from "../i18n";
 function Navbar() {
   const link = [
     { id: 1, path: "/d", title: "Bí Kíp Luyện Thi", list: [] },
@@ -8,6 +9,10 @@ function Navbar() {
     { id: 3, path: "/b", title: "Luyện IElTS" },
     { id: 4, path: "/c", title: "Flyer School" },
   ]
+
+  const handleChangeLanguage = (lng) => {
+    i18n.changeLanguage(lng)
+  }
 
   return (
     <div className="w-full fixed z-[99999] flex justify-center gap-10 top-0">
@@ -20,8 +25,11 @@ function Navbar() {
             </div>
           ))}
         </div>
-        <div className="absolute w-[130px] flex right-[15rem] top-3 ">
-          <Button backgroundImg={Btn} text={"click me!"} />
+        <div className="absolute w-[100px] flex right-[15rem] top-3 ">
+          <Button handleOnclick={() => handleChangeLanguage("en")} backgroundImg={Btn} text={"ENG"} />
+        </div>
+        <div className="absolute w-[100px] flex right-[7.5rem] top-3 ">
+          <Button handleOnclick={() => handleChangeLanguage("vi")} backgroundImg={Btn} text={"VI"} />
         </div>
       </div>
     </div>);

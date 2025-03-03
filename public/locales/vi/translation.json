@@ -1,0 +1,13 @@
+{
+  "HEADER": {
+    "WELCOME": "Học và làm chủ Toán học thông qua những cuộc phiêu lưu hấp dẫn",
+    "BUTTON_FOR_PARENT": "Cha Mẹ & Học Sinh",
+    "BUTTON_FOR_TEACHER_AND_SCHOOL": "Giáo Viên & Nhà Trường",
+    "TEXT_LOGIN": "Bạn đã có tài khoản chưa ?",
+    "LOGIN": "Đăng Nhập"
+  },
+  "CONTENT": {
+    "INTRUDUCE_TITLE": "Mathscrit là gì? 3 lợi ích chính cho học sinh",
+    "INTRUDUCE_CONTENT": "Mathscrit là một nền tảng tương tác được thiết kế để nâng cao việc học Toán bằng cách kết hợp các nguyên tắc học thuật, công nghệ, đồ họa và trò chơi. Nó truyền cảm hứng cho học sinh tiến bộ thông qua các thử thách và bài tập hấp dẫn, cuối cùng giúp các em nắm vững các kỹ năng toán học theo tốc độ của riêng mình."
+  }
+}

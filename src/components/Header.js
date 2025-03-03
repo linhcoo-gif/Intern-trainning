@@ -1,12 +1,12 @@
+import { useTranslation } from "react-i18next";
 import Background from "../assets/background-header.png";
 import Btn from "../assets/btn.png";
 import Border from '../assets/frame-border.png';
 import Logo from '../assets/Logo.png';
 import Button from "../components/Button";
 function Header() {
-  const handleClick = () => {
-    console.log(`Clicked`);
-  }
+
+  const { t } = useTranslation()
 
   return (
     <div className="flex justify-center h-[1000px]" style={{ backgroundImage: `url(${Background})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
@@ -15,15 +15,20 @@ function Header() {
           <img src={Logo} alt="Logo" />
         </div>
         <div className="title text-center font-bold text-white text-[56.69px] max-w-[1200px]">
-          <p>Learn & Master Mathematics Through Engaging Adventures</p>
+          <p>{t("HEADER.WELCOME")}</p>
         </div>
 
         <div className=" header-content gap-[5em] w-full flex justify-center items-center relative">
           <div className="btn w-[400px] flex flex-col gap-[25px]">
-            <Button backgroundImg={Btn} text="For Parents & Students" handleOnclick={handleClick} />
-            <Button backgroundImg={Btn} text="For Teachers & Schools" />
+            <div className="font-bold text-2xl" >
+              <Button backgroundImg={Btn} text={t("HEADER.BUTTON_FOR_PARENT")} />
+            </div>
+            <div className="font-bold text-2xl" >
+              <Button backgroundImg={Btn} text={t("HEADER.BUTTON_FOR_TEACHER_AND_SCHOOL")} />
+            </div>
             <div className="font-bold text-[19.32px] text-center text-white  ">
-              Already have an account?<a className="font-bold text-login-btn underline underline-offset" href="aaa" target="blank">Log in</a>
+              {t("HEADER.TEXT_LOGIN")}
+              <a className="font-bold text-login-btn underline underline-offset" href="aaa" target="blank">{t("HEADER.LOGIN")}</a>
             </div>
           </div>
 

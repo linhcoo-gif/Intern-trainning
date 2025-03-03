@@ -17,19 +17,13 @@ import { dataAnswers, dataScreen, dataSlides, introductionData, LogoData } from 
 import News from './News';
 import { useTranslation } from "react-i18next";
 
-
 function Content() {
-  const text = "Mathscrit is an interactive platform designed to enhance Maths learning by combining academic principles, technology, graphics, and gamification. It inspires students to progress through engaging challenges and exercises, ultimately helping them master mathematical skills at their own pace."
   const gif = "https://w.ladicdn.com/629734dc474010008138d6f5/czhdmwvvv520240823054449.gif"
   const titleLogoComponent = "600,000++ HỌC SINH, THẦY CÔ VÀ TRƯỜNG QUỐC TẾ TIN DÙNG FLYER"
   const textContent = "EAF đánh giá chương trình học của FLYER đáp ứng tốt các tiêu chuẩn chất lượng quốc tế khắt khe theo 3 tiêu chí : Mục tiêu học tập, Phương pháp sư phạm & Tính tương tác của sản phẩm, với sự tham gia của những chuyên gia hàng đầu trong lĩnh vực giáo dục tại Phần Lan."
-  const content = "Mathscrit is an interactive platform designed to enhance Maths learning by combining academic principles, technology, graphics, and gamification. It inspires students to progress through engaging challenges and exercises, ultimately helping them master mathematical skills at their own pace."
+  // const content = "Mathscrit is an interactive platform designed to enhance Maths learning by combining academic principles, technology, graphics, and gamification. It inspires students to progress through engaging challenges and exercises, ultimately helping them master mathematical skills at their own pace."
 
   const { t } = useTranslation();
-
-  // const changeLanguage = (lng) => {
-  //   i18n.changeLanguage(lng)
-  // }
 
   const handleBtnClick = (id) => {
     console.log("show id", id);
@@ -38,20 +32,13 @@ function Content() {
   return (
     <div className="flex flex-col justify-center items-center bg-bg-rgb">
       <div className='max-w-[1200px] flex flex-col gap-[50px] mt-10 mb-10'>
-        <div>
-          <h1>
-            <div>{t('TITLE.WELCOME')}</div>
-            {/* <button onClick={() => changeLanguage("vi")}>Cick me to change languages!</button> */}
-          </h1>
-        </div>
         <Introduction
-          title={"What is Mathscrit? 3 Key Benefits for Students"}
+          title={t("CONTENT.INTRUDUCE_TITLE")}
           textBtn={"Click me"}
-          text={text}
+          content={t("CONTENT.INTRUDUCE_CONTENT")}
           img={frameBorder}
           revert={true}
           gif={gif}
-          content={content}
         />
         <Card />
         <Grid
