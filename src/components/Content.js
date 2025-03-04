@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 import Btn from '../assets/btn.png';
 import certified from '../assets/certified.png';
 import frameBorder from '../assets/frame-border.png';
@@ -19,13 +19,14 @@ import News from './News';
 
 function Content() {
   const gif = "https://w.ladicdn.com/629734dc474010008138d6f5/czhdmwvvv520240823054449.gif"
-  // const content = "Mathscrit is an interactive platform designed to enhance Maths learning by combining academic principles, technology, graphics, and gamification. It inspires students to progress through engaging challenges and exercises, ultimately helping them master mathematical skills at their own pace."
 
   const { t } = useTranslation();
 
   const handleBtnClick = (id) => {
     console.log("show id", id);
   }
+  const topRow = LogoData.slice(0, 5); // 5 logo trên
+  const bottomRow = LogoData.slice(5, 12); // 7 logo dưới
 
   return (
     <div className="flex flex-col justify-center items-center bg-bg-rgb">
@@ -39,29 +40,27 @@ function Content() {
           gif={gif}
         />
         <Card />
-
         <div className=" flex flex-col gap-10 items-center">
           <div className="text-white text-[2rem] font-semibold text-center">
             <div className="w-[690px] break-words">{t("CONTENT.GRID_TITLE")}</div>
           </div>
           <Grid
-            data={LogoData} />
+            topRow={topRow}
+            bottomRow={bottomRow}
+          />
         </div>
-
         <div className='flex flex-col gap-10'>
           <div className='text-center text-white text-[40px] font-bold '>
             {t("CONTENT.SLIDES_TITLE")}
           </div>
           <Slides data={dataSlides} />
         </div>
-
         <ShowImage
           revert={true}
           img={certified}
           title={t("CONTENT.SHOWIMAGE_TITLE")}
           textContent={t("CONTENT.SHOWIMAGE_TEXT")}
         />
-
         <ShowImage
           title={t("CONTENT.SHOWIMAGE_TITLE_STATISTICAL")}
           img={LogoImage}
@@ -84,12 +83,10 @@ function Content() {
             handleClick={() => handleBtnClick(el.id)}
           />
         ))}
-
         <RegisterForm
           data={dataAnswers}
           title={t("CONTENT.REGISTER_FORM_TITLE")}
           hotline={t("CONTENT.REGISTER_FORM_HOTLINE")} />
-
         <div className='text-center text-white font-bold text-[3rem]'>{t("CONTENT.BOX_TITLE")}</div>
         <Box
           img={frameBorder}
