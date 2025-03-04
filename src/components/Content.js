@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import Btn from '../assets/btn.png';
 import certified from '../assets/certified.png';
 import frameBorder from '../assets/frame-border.png';
@@ -10,17 +11,14 @@ import CardMember from '../components/CardMember';
 import Grid from '../components/Grid';
 import Introduction from '../components/Introduction';
 import RegisterForm from '../components/RegisterForm';
+import { Screen } from '../components/Screen';
 import ShowImage from '../components/ShowImage';
 import Slides from '../components/Slider';
-import { Screen } from '../components/Screen';
 import { dataAnswers, dataScreen, dataSlides, introductionData, LogoData } from '../data/mockData';
 import News from './News';
-import { useTranslation } from "react-i18next";
 
 function Content() {
   const gif = "https://w.ladicdn.com/629734dc474010008138d6f5/czhdmwvvv520240823054449.gif"
-  const titleLogoComponent = "600,000++ HỌC SINH, THẦY CÔ VÀ TRƯỜNG QUỐC TẾ TIN DÙNG FLYER"
-  const textContent = "EAF đánh giá chương trình học của FLYER đáp ứng tốt các tiêu chuẩn chất lượng quốc tế khắt khe theo 3 tiêu chí : Mục tiêu học tập, Phương pháp sư phạm & Tính tương tác của sản phẩm, với sự tham gia của những chuyên gia hàng đầu trong lĩnh vực giáo dục tại Phần Lan."
   // const content = "Mathscrit is an interactive platform designed to enhance Maths learning by combining academic principles, technology, graphics, and gamification. It inspires students to progress through engaging challenges and exercises, ultimately helping them master mathematical skills at their own pace."
 
   const { t } = useTranslation();
@@ -41,25 +39,33 @@ function Content() {
           gif={gif}
         />
         <Card />
-        <Grid
-          title={titleLogoComponent}
-          data={LogoData} />
+
+        <div className=" flex flex-col gap-10 items-center">
+          <div className="text-white text-[2rem] font-semibold text-center">
+            <div className="w-[690px] break-words">{t("CONTENT.GRID_TITLE")}</div>
+          </div>
+          <Grid
+            data={LogoData} />
+        </div>
+
         <div className='flex flex-col gap-10'>
           <div className='text-center text-white text-[40px] font-bold '>
-            Mathscrit Hall of Legends
+            {t("CONTENT.SLIDES_TITLE")}
           </div>
           <Slides data={dataSlides} />
         </div>
+
         <ShowImage
           revert={true}
           img={certified}
-          textContent={textContent}
-          title="ĐẠT CHUẨN CHẤT LƯỢNG GIÁO DỤC QUỐC TẾ CỦA PHẦN LAN"
+          title={t("CONTENT.SHOWIMAGE_TITLE")}
+          textContent={t("CONTENT.SHOWIMAGE_TEXT")}
         />
+
         <ShowImage
-          title={"A Research-Backed Learning Pathway"}
+          title={t("CONTENT.SHOWIMAGE_TITLE_STATISTICAL")}
           img={LogoImage}
-          textContent={"The structured learning journey in Mathscrit is designed based on international mathematics frameworks and trusted educational curricula. It aligns with global math standards, ensuring students receive a high-quality and effective learning experience."}
+          textContent={t("CONTENT.SHOWIMAGE_TEXT_STATISTICAL")}
         />
         {introductionData.map((el) => (
           <Introduction
@@ -78,11 +84,13 @@ function Content() {
             handleClick={() => handleBtnClick(el.id)}
           />
         ))}
+
         <RegisterForm
           data={dataAnswers}
-          title={"ĐĂNG KÝ NHẬN ƯU ĐÃI SIÊU TIẾT KIỆM TỪ FLYER"}
-          hotline={"Cần hỗ trợ gấp, vui lòng liên hệ hotline Zalo 0965376466"} />
-        <div className='text-center text-white font-bold text-[3rem]'>PHẢN HỒI CỦA PHỤ HUYNH, THẦY CÔ</div>
+          title={t("CONTENT.REGISTER_FORM_TITLE")}
+          hotline={t("CONTENT.REGISTER_FORM_HOTLINE")} />
+
+        <div className='text-center text-white font-bold text-[3rem]'>{t("CONTENT.BOX_TITLE")}</div>
         <Box
           img={frameBorder}
           avatarMember={avatarMember}

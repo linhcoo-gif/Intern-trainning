@@ -1,6 +1,4 @@
 import navbar from "../assets/navbar.png";
-import Btn from '../assets/btn.png';
-import Button from "./Button";
 import i18n from "../i18n";
 function Navbar() {
   const link = [
@@ -25,11 +23,15 @@ function Navbar() {
             </div>
           ))}
         </div>
-        <div className="absolute w-[100px] flex right-[15rem] top-3 ">
-          <Button handleOnclick={() => handleChangeLanguage("en")} backgroundImg={Btn} text={"ENG"} />
-        </div>
-        <div className="absolute w-[100px] flex right-[7.5rem] top-3 ">
-          <Button handleOnclick={() => handleChangeLanguage("vi")} backgroundImg={Btn} text={"VI"} />
+        <div className="absolute right-[2rem] top-3 w-[120px]">
+          <select
+            className="w-full px-3 py-2 border rounded-lg bg-white text-gray-700 font-bold shadow-sm focus:outline-none"
+            onChange={(e) => handleChangeLanguage(e.target.value)}
+            defaultValue="en"
+          >
+            <option value="en">Eng</option>
+            <option value="vi">VN</option>
+          </select>
         </div>
       </div>
     </div>);
