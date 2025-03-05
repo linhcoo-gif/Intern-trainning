@@ -5,18 +5,19 @@ import Contact from '../components/Contact';
 import Navbar from '../components/Navbar';
 import { useRef } from 'react';
 function Main() {
-  const myref = useRef(null);
+  const myref = useRef({});
   const handleScroll = () => {
-    myref.current.scrollIntoView({ behavior: 'smooth' });
+    myref.current.scrollIntoView({ behavior: 'smooth', block: "center" });
   }
-  const handleScrollToContent = (id) => {
-    console.log('id: ', id);
-    console.log(123);
+  const handleScrollContent = (id) => {
+    if (myref.current[id]) {
+      myref.current[id].scrollIntoView({ behavior: "smooth", block: "center" });
+    }
   }
 
   return (
     <div>
-      <Navbar handleClick={handleScrollToContent} />
+      <Navbar handleClick={handleScrollContent} />
       <Contact />
       <Header handleClick={handleScroll} />
       <Content refProp={myref} />

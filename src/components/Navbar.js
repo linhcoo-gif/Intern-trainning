@@ -2,8 +2,8 @@ import navbar from "../assets/navbar.png";
 import i18n from "../i18n";
 function Navbar({ handleClick }) {
   const link = [
-    { id: 1, path: "/d", title: "Bí Kíp Luyện Thi", list: ["Điểm Ưu Việt", "Phương Pháp", "Tính Năng Mới", "Đánh Giá Thực Tế"] },
-    { id: 2, path: "/a", title: "Vì sao nên chọn", list: [] },
+    { id: 1, path: "/d", title: "Vì sao nên chọn", list: ["Điểm Ưu Việt", "Phương Pháp", "Tính Năng Mới", "Đánh Giá Thực Tế"] },
+    { id: 2, path: "/a", title: "Bí Kíp Luyện Thi", list: [] },
     { id: 3, path: "/b", title: "Luyện Cambridge" },
   ]
 
@@ -24,11 +24,13 @@ function Navbar({ handleClick }) {
         </div>
         <div className="absolute right-[2.5em] top-[10px] w-[100px] ">
           <select
-            className="px-4 py-2 border text-white rounded-lg bg-pink-400 text-gray-700 font-bold shadow-sm focus:outline-none"
+            className="px-4 py-2 border text-white rounded-lg bg-fuchsia-400 font-bold shadow-sm focus:outline-none"
             onChange={(e) => handleChangeLanguage(e.target.value)}
-            defaultValue="en"
+            defaultValue="vi"
           >
-            <option value="en">Eng</option>
+            <option value="en">
+              Eng
+            </option>
             <option value="vi">VN</option>
           </select>
         </div>

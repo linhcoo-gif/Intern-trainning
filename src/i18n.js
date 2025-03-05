@@ -8,7 +8,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    lng: "en", // force browser language to Vietnamese
+    lng: "vi", // force browser language to Vietnamese
     fallbackLng: "vi", //default language to use
     debug: false, // disable debug
     interpolation: {
