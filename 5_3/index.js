@@ -32,14 +32,15 @@
 //==========================THEO OOP===================================
 
 class Tabs {
-  constructor(wrapper, tabButton, contentList,groupContent ,addButton) {
+  constructor(wrapper, tabButton, contentList, groupContent, addButton) {
     this.wrapper = wrapper;
     this.tabButton = tabButton;
     this.contentList = contentList;
     this.groupContent = groupContent;
     this.setContent();
     this.handleClickTab = this.handleClickTab;
-    this.addButton = document.querySelector("."+addButton)
+    this.addButton = document.querySelector("." + addButton);
+    this.initEvent();
   }
   setContent() {
     console.log(this);
@@ -65,6 +66,7 @@ class Tabs {
   }
 
   activeTheClass(index) {
+    console.log(this.tabButtonList);
     this.tabButtonList && this.tabButtonList[index].classList.add("active");
     this.contentListTabs && this.contentListTabs[index].classList.add("active");
   }
@@ -86,33 +88,39 @@ class Tabs {
   };
 
   addNewTab() {
-    let contentList = document.querySelector("."+this.groupContent);
+    let contentList = document.querySelector("." + this.groupContent);
     let newIndex = this.tabWrapper.querySelectorAll("li").length;
     let newTab = document.createElement("li");
     newTab.classList.add("button");
     newTab.classList.add(this.tabButton);
     newTab.setAttribute("data-index", newIndex);
     newTab.textContent = `Tab ${newIndex + 1}`;
-    this.tabWrapper1.appendChild(newTab);
+    this.tabWrapper.appendChild(newTab);
     let newContent = document.createElement("li");
     newContent.classList.add("tabcontent");
-    newContent.classList.add("js-tabcontent");
+    newContent.classList.add(this.contentList.replace(".", ""));
     newContent.textContent = `Nội dung mới thứ ${newIndex + 1}`;
     contentList.appendChild(newContent);
-    tab.setContent();
+    this.setContent();
   }
 }
 
-const tab = new Tabs(".js-tabs-wrapper", "js-tab-button", ".js-tabcontent","groupContent", "AddNew");
-tab.initEvent();
-tab.activeTabDefault(1);
+const tab = new Tabs(
+  ".js-tabs-wrapper",
+  "js-tab-button",
+  ".js-tabcontent",
+  "groupContent",
+  "AddNew"
+);
+tab.activeTabDefault(3);
 const tab1 = new Tabs(
   ".js-tabs-wrapper-new",
   "js-tab-button-new",
   ".js-tabcontent-new",
-  "groupContent"
+  "groupContent-new",
+  "AddNew-new"
 );
-tab1.initEvent();
+// tab1.initEvent();
 
 // document.querySelector(".AddNew").addEventListener("click", function () {
 //   let tabList = document.querySelector(".groupbutton");
