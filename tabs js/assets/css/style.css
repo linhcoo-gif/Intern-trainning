@@ -17,7 +17,20 @@
     transition: 0.3s;
 }
 
+.tab-1 {
+    padding: 10px 15px;
+    border: none;
+    background: lightgray;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
 .tab-btn.active {
+    background: blue;
+    color: white;
+}
+
+.tab-1.active {
     background: blue;
     color: white;
 }
@@ -37,6 +50,16 @@
     border: 1px solid #ddd;
 }
 
+.tab-content-1 {
+    display: none;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
 .tab-pane.active {
+    display: block;
+}
+
+.tab-content-1.active {
     display: block;
 }
