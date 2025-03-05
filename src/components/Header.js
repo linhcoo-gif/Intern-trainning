@@ -4,7 +4,7 @@ import Btn from "../assets/btn.png";
 import Border from '../assets/frame-border.png';
 import Logo from '../assets/Logo.png';
 import Button from "../components/Button";
-function Header() {
+function Header({ handleClick }) {
 
   const { t } = useTranslation()
 
@@ -21,7 +21,7 @@ function Header() {
         <div className=" header-content gap-[5em] w-full flex justify-center items-center relative">
           <div className="btn w-[400px] flex flex-col gap-[25px]">
             <div className="font-bold text-2xl" >
-              <Button backgroundImg={Btn} text={t("HEADER.BUTTON_FOR_PARENT")} />
+              <Button handleOnclick={handleClick} backgroundImg={Btn} text={t("HEADER.BUTTON_FOR_PARENT")} />
             </div>
             <div className="font-bold text-2xl" >
               <Button backgroundImg={Btn} text={t("HEADER.BUTTON_FOR_TEACHER_AND_SCHOOL")} />

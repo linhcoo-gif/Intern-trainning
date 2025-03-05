@@ -92,20 +92,31 @@ export const cardData = [
   {
     id: 1,
     headLine: "X2 ",
-    title: "khả năng ghi nhớ, thực hành!",
-    textList: ["- Học cá nhân hoá + game hoá, giúp trẻ học vui, đúng trọng tâm", "- 10 cấp độ phù hợp với từng độ tuổi của trẻ, từ dễ đến nâng cao", "- Luyện Nghe - Nói với giọng Anh - Mỹ chuẩn bản xứ"]
+    title: "Faster Skill Mastery & Retention",
+    textList: [
+      "- Personalized learning combined with gamification makes math practice enjoyable and effective.",
+      "- 10 progressive levels designed to match different learning abilities, from basic to advanced.",
+      "- Interactive exercises that enhance problem-solving skills and logical thinking."
+    ]
   },
   {
     id: 2,
     headLine: "+300%",
-    title: "hiệu quả luyện tiếng Anh",
-    textList: ["- 6.000+ đề luyện bám sát đề thi thật Cambridge, TOEFL và Bộ Giáo Dục", "- AI chấm chữa tự động, nhận xét chi tiết như 1 giáo viên thật", "- Luyện Nghe - Nói với giọng Anh - Mỹ chuẩn bản xứ"]
+    title: "More Effective Learning Outcomes",
+    textList: [
+      "- 300+ structured practice problems, aligned with international standards and curriculums.",
+      "- Accurate skill assessment with diagnostic tests and progress reports.",
+    ]
   },
   {
     id: 3,
     headLine: "+62%",
-    title: "hứng thú học tập",
-    textList: ["- Đa dạng tính năng học: đề thi thử, mini test 5-10 phút, quiz từ vựng,…", "- Thách đấu bạn bè: tăng tính cạnh tranh lành mạnh & động lực học", "- Bảng xếp hạng học tập: Đua top cùng bạn bè trên khắp cả nước"]
+    title: "Higher Learning Engagement",
+    textList: [
+      "- Diverse learning modes, including mock tests, quick mini-challenges, and skill-based quizzes.",
+      "- Friendly competition with peers, boosting motivation through leaderboards and challenges.",
+      "- Rank-based progression, encouraging students to improve and compete in a fun learning environment."
+    ]
   }
 ]
 

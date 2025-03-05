@@ -1,14 +1,16 @@
-import Answer from "./Answer";
+// import Answer from "./Answer";
 
 function RegisterForm({ title, hotline, data }) {
   return (
-    <div className="flex flex-col gap-3 items-center ">
+    <div className="flex flex-col gap-3 items-center">
       <div className="font-semibold text-[2rem] text-white">{title}</div>
       <p className="text-white text-[18px]">{hotline}</p>
-      <div className="flex items-center gap-[8em]">
-        <Answer data={data} />
+      <div className="flex items-center gap-[8em] max-w-[1200px]">
+        {/* <div>
+          <Answer data={data} />
+        </div> */}
         <div className="bg-white p-5 rounded-xl border border-gray">
-          <form onSubmit={(e) => e.preventDefault()} className="flex flex-col w-[522px] max-h-[478px] gap-5 p-[5px] overflow-y-auto">
+          <form onSubmit={(e) => e.preventDefault()} className="flex flex-col w-[1150px] max-h-[478px] gap-5 p-[5px] overflow-y-auto">
             <div className="font-bold text-gray-500">Bạn là: *</div>
             <label htmlFor="parrent" className="flex gap-2 items-center w-[150px]">
               <input className="peer hidden" id="parrent" type="radio" name="choose" />
