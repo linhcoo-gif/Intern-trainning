@@ -1,0 +1,40 @@
+html {
+    scroll-padding-top: 4.5rem;
+}
+
+body {
+    position: relative;
+}
+
+p {
+    line-height: $line-height-lg;
+}
+
+// Spacing and heading styling for page sections
+
+.page-section {
+    padding: 6rem 0;
+
+    h2.section-heading {
+        font-size: 2.5rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    h3.section-subheading {
+        font-size: 1rem;
+        font-weight: 400;
+        font-style: italic;
+        font-family: $subheadings-font-family;
+        margin-bottom: 4rem;
+    }
+}
+
+// Increase the padding on sections when screen size is greater
+// than the medium breakpoint (set by Bootstrap)
+
+@include media-breakpoint-up(md) {
+    section {
+        padding: 9rem 0;
+    }
+}

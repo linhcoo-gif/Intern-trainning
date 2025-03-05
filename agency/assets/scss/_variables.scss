@@ -1,0 +1,24 @@
+$yellow: #ffc800;
+
+$primary: $yellow;
+
+$min-contrast-ratio: 1.5;
+
+$--btn-color: #fff;
+$--btn-font-weight: 900;
+$--btn-line-height: 2;
+
+$font-family-base: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$headings-font-family: "Montserrat", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$subheadings-font-family: $font-family-base;
+
+$headings-font-weight: 700;
+$headings-letter-spacing: 0.0625em;
+
+$line-height-lg: 1.75;
