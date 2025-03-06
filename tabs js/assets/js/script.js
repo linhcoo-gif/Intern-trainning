@@ -71,7 +71,7 @@ class Tabs {
         newContent.classList.add(this.nameClassContentTab);
         newContent.innerHTML = Content;
         // newContent.textContent = Content;
-        newContent.insertAdjacentElement("afterend", newContent);
+        // newContent.insertAdjacentElement("afterend", newContent);
 
         // them vao dom
         this.tabContainer.appendChild(newButton);
@@ -96,6 +96,118 @@ const newTab = new Tabs({
     tabContents: "tab-pane",
 });
 
+// const buttonAdd1 = document.querySelector(".btn-add-1");
+// const buttonAdd2 = document.querySelector(".btn-add-2");
+// let count1 = 0;
+// let count2 = 0;
+
+// if (buttonAdd1) {
+//     buttonAdd1.addEventListener("click", (e) => {
+//         const tmp = count1++;
+//         newTab.addTag(
+//             `${tmp}`,
+//             `
+//             <h1>Nội dung ${tmp}</h1>
+//             `
+//         );
+//     });
+// }
+
+// const newTab1 = new Tabs({
+//     tabContainer: "tabs-1",
+//     tabItems: "tab-1",
+//     tabContents: "tab-content-1",
+// });
+
+// if (buttonAdd2) {
+//     buttonAdd2.addEventListener("click", (e) => {
+//         const tmp = count2++;
+//         newTab1.addTag(tmp, `Nội dung ${tmp}`);
+//     });
+// }
+
+function createTabs({ tabContainer, tabItems, tabContents }) {
+    const tabContainerEl = document.querySelector(`.${tabContainer}`);
+    let tabItemsEl = document.querySelectorAll(`.${tabItems}`);
+    let tabContentsEl = document.querySelectorAll(`.${tabContents}`);
+
+    const nameClassItemTab = tabItems;
+    const nameClassContentTab = tabContents;
+
+    function init() {
+        tabContainerEl.addEventListener("click", (e) => {
+            const clickedTab = e.target;
+            if (clickedTab.classList.contains(nameClassItemTab)) {
+                const tabIndex = Array.from(tabItemsEl).indexOf(clickedTab);
+                activateTab(tabIndex);
+            }
+        });
+
+        // Mac ding tab dau tien bat
+        activateTab(0);
+    }
+
+    function activateTab(index) {
+        tabItemsEl.forEach((item) => item.classList.remove("active"));
+        tabContentsEl.forEach((item) => item.classList.remove("active"));
+
+        tabItemsEl[index].classList.add("active");
+        tabContentsEl[index].classList.add("active");
+    }
+
+    function activeTabDefault(index) {
+        activateTab(index);
+    }
+
+    function addTab(tabName, content) {
+        // Tạo nút tab mới
+        const newButton = document.createElement("button");
+        newButton.classList.add(nameClassItemTab);
+        newButton.textContent = tabName;
+
+        // Tạo nội dung mới cho tab
+        const newContent = document.createElement("div");
+        newContent.classList.add(nameClassContentTab);
+        newContent.innerHTML = content;
+
+        // Chèn vào DOM
+        tabContainerEl.insertAdjacentElement("beforeend", newButton);
+        document
+            .querySelector(`.${nameClassContentTab}`)
+            .parentElement.insertAdjacentElement("beforeend", newContent);
+
+        reloadTabs();
+    }
+
+    function reloadTabs() {
+        tabItemsEl = document.querySelectorAll(`.${nameClassItemTab}`);
+        tabContentsEl = document.querySelectorAll(`.${nameClassContentTab}`);
+    }
+
+    // Chay su kien ban dau
+    init();
+
+    return {
+        activateTab,
+        activeTabDefault,
+        addTab,
+    };
+}
+
+const tabs1 = createTabs({
+    tabContainer: "tab-buttons",
+    tabItems: "tab-btn",
+    tabContents: "tab-pane",
+});
+
+tabs1.addTab("Tab mới", "Nội dung Tab mới");
+
+const tabs2 = createTabs({
+    tabContainer: "tabs-1",
+    tabItems: "tab-1",
+    tabContents: "tab-content-1",
+});
+
 const buttonAdd1 = document.querySelector(".btn-add-1");
 const buttonAdd2 = document.querySelector(".btn-add-2");
 let count1 = 0;
@@ -104,7 +216,7 @@ let count2 = 0;
 if (buttonAdd1) {
     buttonAdd1.addEventListener("click", (e) => {
         const tmp = count1++;
-        newTab.addTag(
+        tabs1.addTab(
             `${tmp}`,
             `
             <h1>Nội dung ${tmp}</h1>
@@ -122,6 +234,6 @@ const newTab1 = new Tabs({
 if (buttonAdd2) {
     buttonAdd2.addEventListener("click", (e) => {
         const tmp = count2++;
-        newTab1.addTag(tmp, `Nội dung ${tmp}`);
+        tabs2.addTab(tmp, `Nội dung ${tmp}`);
     });
 }
