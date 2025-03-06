@@ -70,6 +70,8 @@ class Tabs {
         const newContent = document.createElement("div");
         newContent.classList.add(this.nameClassContentTab);
         newContent.innerHTML = Content;
+        // newContent.textContent = Content;
+        newContent.insertAdjacentElement("afterend", newContent);
 
         // them vao dom
         this.tabContainer.appendChild(newButton);
