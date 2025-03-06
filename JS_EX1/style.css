@@ -1,0 +1,59 @@
+body {
+  display: flex;
+}
+ul {
+  display: inline-block;
+}
+.button {
+  list-style-type: none;
+  padding: 10px;
+  border: black 1px solid;
+  border-radius: 5%;
+  margin-top: 10px;
+  cursor: pointer;
+  &:hover {
+    color: rgb(0, 255, 0);
+    background-color: violet;
+  }
+}
+
+.textarea {
+  display: inline-block;
+  display: flex;
+  margin: 10px;
+}
+
+.text{
+    transition: opacity 0.3s ease; /* Hiệu ứng mờ dần trong 0.3 giây */
+}
+.groupContent li{
+  display: none;
+}
+
+.groupContent li{
+  display: none;
+}
+.button.active{
+  color: red;
+}
+
+
+.tabcontent.active{
+  display: block;
+}
+
+
+#father{
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+
+.AddNew ,.AddNew-new{
+  margin-left: 30px ;
+  padding: 10px;
+  cursor: pointer;
+  width: 70px;
+  height: 20px;
+  border: 1px black solid;
+}
