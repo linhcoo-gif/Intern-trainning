@@ -93,8 +93,8 @@ reduce(callback(accumulator, currentValue, index, array), initialValue)
 */
 
 Array.prototype.myreduce = function (cb, initialValue) {
-    let accumulator = initialValue ? initialValue : this[0];
-    let start = initialValue ? 0 : 1;
+    let accumulator = initialValue !== undefined ? initialValue : this[0];
+    let start = initialValue !== undefined ? 0 : 1;
 
     for (let i = start; i < this.length; i++) {
         accumulator = cb(accumulator, this[i], this);
@@ -122,3 +122,25 @@ Array.prototype.myfilter = function (cb) {
 };
 
 console.log(arr.myfilter((item, index) => item % 2 == 0));
+
+// 1,
+const course = [
+    { id: 1, name: "js", price: 200 },
+    { id: 2, name: "React", price: 500 },
+    { id: 3, name: "PHP", price: 600 },
+    { id: 4, name: "Nodejs", price: 100 },
+];
+//   - Biến đổi name trong mảng thêm chữ course Ví dụ :  js course
+const newCourse = course.mymap((item) => {
+    return { ...item, name: `${item.name} course` };
+});
+console.log(newCourse);
+//   - Thực hiện lọc với phần tử mảng có price >= 200
+const newCourse2 = course.myfilter((item) => item.price >= 200);
+console.log(newCourse2);
+//   - Xóa phần tử trong mảng có id= 1
+const newCourse3 = course.myfilter((item) => item.id !== 1);
+console.log(newCourse3);
+//   - tính tổng giá các khóa học
+const newCourse4 = course.myreduce((sum, curr) => sum + curr.price, 0);
+console.log(newCourse4);
