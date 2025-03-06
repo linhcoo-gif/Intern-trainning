@@ -10,7 +10,21 @@
     gap: 10px;
 }
 
+.tabs-1 {
+    display: flex;
+    gap: 10px;
+}
+
 .tab-btn {
+    padding: 10px 15px;
+    border: none;
+    background: lightgray;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-add {
+    margin-top: 20px;
     padding: 10px 15px;
     border: none;
     background: lightgray;

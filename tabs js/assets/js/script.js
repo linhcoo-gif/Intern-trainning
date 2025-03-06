@@ -69,7 +69,7 @@ class Tabs {
         // Tao ra content voi tab moi
         const newContent = document.createElement("div");
         newContent.classList.add(this.nameClassContentTab);
-        newContent.textContent = Content;
+        newContent.innerHTML = Content;
 
         // them vao dom
         this.tabContainer.appendChild(newButton);
@@ -94,10 +94,32 @@ const newTab = new Tabs({
     tabContents: "tab-pane",
 });
 
-newTab.addTag("test", "test");
+const buttonAdd1 = document.querySelector(".btn-add-1");
+const buttonAdd2 = document.querySelector(".btn-add-2");
+let count1 = 0;
+let count2 = 0;
+
+if (buttonAdd1) {
+    buttonAdd1.addEventListener("click", (e) => {
+        const tmp = count1++;
+        newTab.addTag(
+            `${tmp}`,
+            `
+            <h1>Nội dung ${tmp}</h1>
+            `
+        );
+    });
+}
 
 const newTab1 = new Tabs({
     tabContainer: "tabs-1",
     tabItems: "tab-1",
     tabContents: "tab-content-1",
 });
+
+if (buttonAdd2) {
+    buttonAdd2.addEventListener("click", (e) => {
+        const tmp = count2++;
+        newTab1.addTag(tmp, `Nội dung ${tmp}`);
+    });
+}
