@@ -26,7 +26,8 @@ class Tabs {
         this.tabContainer = document.querySelector(`.${tabContainer}`);
         this.tabItems = document.querySelectorAll(`.${tabItems}`);
         this.tabContents = document.querySelectorAll(`.${tabContents}`);
-        this.nameClassTab = tabItems;
+        this.nameClassItemTab = tabItems;
+        this.nameClassContentTab = tabContents;
 
         // closure
         this.init();
@@ -36,30 +37,54 @@ class Tabs {
         this.tabContainer.addEventListener("click", (e) => {
             const clickedTab = e.target;
 
-            if (clickedTab.classList.contains(this.nameClassTab)) {
+            if (clickedTab.classList.contains(this.nameClassItemTab)) {
                 const tabIndex = Array.from(this.tabItems).indexOf(clickedTab);
                 this.activateTab(tabIndex);
             }
-
-            return;
         });
 
-        // nếu ko bắt được sự kiện click thì phần tử 0 mặc định active
-        this.activateTab(0);
+        this.activateTab(0); // Mặc định active tab đầu tiên
     }
 
     activateTab(index) {
-        // Xóa  active
+        // Xóa class active
         this.tabItems.forEach((item) => item.classList.remove("active"));
         this.tabContents.forEach((item) => item.classList.remove("active"));
 
-        // Kích hoạt tab và nội dung tương ứng
+        // Thêm class active vào tab được chọn
         this.tabItems[index].classList.add("active");
         this.tabContents[index].classList.add("active");
     }
 
     activeTabDefault(index) {
         this.activateTab(index);
+    }
+
+    addTag(tabName, Content) {
+        // Tao ra tabName moi
+        const newButton = document.createElement("button");
+        newButton.classList.add(this.nameClassItemTab);
+        newButton.textContent = tabName;
+
+        // Tao ra content voi tab moi
+        const newContent = document.createElement("div");
+        newContent.classList.add(this.nameClassContentTab);
+        newContent.textContent = Content;
+
+        // them vao dom
+        this.tabContainer.appendChild(newButton);
+        document
+            .querySelector(`.${this.nameClassContentTab}`)
+            .parentElement.appendChild(newContent);
+
+        this.reloadTabs();
+    }
+    // reload lai khi them tab
+    reloadTabs() {
+        this.tabItems = document.querySelectorAll(`.${this.nameClassItemTab}`);
+        this.tabContents = document.querySelectorAll(
+            `.${this.nameClassContentTab}`
+        );
     }
 }
 
@@ -69,12 +94,10 @@ const newTab = new Tabs({
     tabContents: "tab-pane",
 });
 
-newTab.activeTabDefault(2);
+newTab.addTag("test", "test");
 
 const newTab1 = new Tabs({
     tabContainer: "tabs-1",
     tabItems: "tab-1",
     tabContents: "tab-content-1",
 });
-
-// newTab.activeTabDefault(2);
