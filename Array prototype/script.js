@@ -144,3 +144,76 @@ console.log(newCourse3);
 //   - tính tổng giá các khóa học
 const newCourse4 = course.myreduce((sum, curr) => sum + curr.price, 0);
 console.log(newCourse4);
+
+//  2,
+const cars = [
+    {
+        make: "audi",
+        model: "r8",
+        year: "2012",
+    },
+    {
+        make: "audi",
+        model: "rs5",
+        year: "2013",
+    },
+    {
+        make: "ford",
+        model: "mustang",
+        year: "2012",
+    },
+];
+
+// Yêu cầu ra được output như sau :
+// const cars = {
+//      'audi': [
+//          {
+//              'model': 'r8',
+//              'year': '2012'
+//          }, {
+//              'model': 'rs5',
+//              'year': '2013'
+//          },
+//      ],
+//      'ford': [
+//          {
+//              'model': 'mustang',
+//              'year': '2012'
+//          }, {
+//              'model': 'fusion',
+//              'year': '2015'
+//          }
+// ],
+//      'kia': [
+//          {
+//              'model': 'optima',
+//             'year': '2012'
+//          }
+//    ]
+// }
+// Sử dụng 2 cách để code :
+//   - Sử dụng foreach thông thường
+
+let newCars = {};
+
+cars.forEach(({ make, model, year }) => {
+    if (!newCars[make]) {
+        newCars[make] = [];
+    }
+    newCars[make].push({ model, year });
+});
+
+console.log(newCars);
+//   - Sử dụng reduce
+
+const newCars1 = cars.myreduce((accu, { make, model, year }) => {
+    if (!accu[make]) {
+        accu[make] = [];
+    }
+
+    accu[make].push({ model, year });
+
+    return accu;
+}, {});
+
+console.log(newCars1);
