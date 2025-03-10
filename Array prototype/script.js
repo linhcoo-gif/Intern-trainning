@@ -217,3 +217,104 @@ const newCars1 = cars.myreduce((accu, { make, model, year }) => {
 }, {});
 
 console.log(newCars1);
+
+const nestedArray = [1, [2, [3, [4, 5]]], 6];
+
+function flatArray(arr) {
+    while (arr.some((item) => Array.isArray(item))) {
+        arr = [].concat(...arr);
+    }
+    return arr;
+}
+
+const newNestedArray = nestedArray.reduce((accu, curr, index) => {
+    if (Array.isArray(curr)) {
+        return [...accu, ...flatArray(curr)];
+    } else {
+        return [...accu, curr];
+    }
+}, []);
+
+function flatArrayFunc(arr) {
+    return arr.reduce((accu, curr) => {
+        if (Array.isArray(curr)) {
+            return [...accu, ...flatArrayFunc(curr)];
+        } else {
+            return [...accu, curr];
+        }
+    }, []);
+}
+
+console.log(flatArrayFunc(nestedArray));
+
+console.log(newNestedArray);
+
+// console.log(newNestedArray);
+
+const items = [
+    { id: 1, parentId: null, name: "Root" },
+    { id: 2, parentId: 1, name: "Child 1" },
+    { id: 3, parentId: 1, name: "Child 2" },
+    { id: 4, parentId: 2, name: "Grandchild 1" },
+];
+
+// const output = {
+//     id: 1,
+//     parentId: null,
+//     name: "Root",
+//     children: [
+//         {
+//             id: 2,
+//             parentId: 1,
+//             name: "Child 1",
+//             children: [
+//                 { id: 4, parentId: 2, name: "Grandchild 1", children: [] },
+//             ],
+//         },
+//         { id: 3, parentId: 1, name: "Child 2", children: [] },
+//     ],
+// };
+
+const buildTree = (items) => {
+    return items.reduce((acc, item) => {
+        // Tạo node với children trống
+        const node = { ...item, children: [] };
+
+        // Nếu là root (parentId === null), lưu vào acc.root
+        if (item.parentId === null) {
+            acc[item.id] = node;
+        } else {
+            // Nếu có parentId, tìm cha trong map và thêm node vào children của cha
+            acc[item.parentId]?.children.push(node);
+        }
+
+        return acc;
+    }, {});
+};
+
+const Map = {};
+
+items.forEach((item) => {
+    Map[item.id] = { ...item, children: [] };
+});
+
+const Output = items.reduce((pre, curr) => {
+    if (curr.parentId === null) {
+        pre = Map[curr.id];
+    } else {
+        Map[curr.parentId].children.push(Map[curr.id]);
+    }
+    return pre;
+}, {});
+
+const map = {};
+const root = items.reduce((pre, item) => {
+    map[item.id] = { ...item, children: [] };
+    if (item.parentId === null) return map[item.id];
+    map[item.parentId].children.push(map[item.id]);
+    return pre;
+}, null);
+
+console.log(root);
+
+// console.log(Output);
