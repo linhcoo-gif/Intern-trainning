@@ -4,6 +4,7 @@
 
 import { useRef } from "react";
 import Search from "./components/Search";
+import ScrollTracker from "./components/ScrollTracker";
 
 // Truy xuất trực tiếp vào dom và ko cần re-render
 // lưu trữ giá trị có thể thay đổi nhưng ko gây re-render
@@ -13,7 +14,7 @@ export default function UseRefPractice() {
     const count = useRef(0);
 
     function focusInput() {
-        inputRef.current.focus();
+        // inputRef.current.focus();
         count.current++;
     }
 
@@ -22,6 +23,7 @@ export default function UseRefPractice() {
             <input ref={inputRef} type="text" />
             <button onClick={focusInput}>Focus Input</button>
             <Search />
+            <ScrollTracker />
         </div>
     );
 }

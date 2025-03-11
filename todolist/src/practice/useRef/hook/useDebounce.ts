@@ -6,6 +6,9 @@ import { useState, useEffect } from "react";
  * @param delay Thời gian debounce (ms), mặc định là 500ms
  * @returns Giá trị đã debounce
  */
+
+// useDebounce hoạt động dựa trên tư tưởng "trì hoãn cập nhật giá trị"
+// để tránh thực hiện quá nhiều lần xử lý không cần thiết trong một khoảng thời gian ngắn.
 function useDebounce<T>(value: T, delay: number = 500): T {
     const [debouncedValue, setDebouncedValue] = useState<T>(value);
 
