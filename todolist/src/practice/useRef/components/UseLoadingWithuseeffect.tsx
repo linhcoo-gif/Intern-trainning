@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import useLoading from "./useLoading";
+import useLoading from "../hook/useLoading";
 
 const fetchPosts = async () => {
     const res = await fetch("https://jsonplaceholder.typicode.com/posts");

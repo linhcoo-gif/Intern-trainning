@@ -1,4 +1,4 @@
-import useLoading from "./useLoading";
+import useLoading from "../hook/useLoading";
 
 const fetchUserData = async () => {
     return new Promise((resolve) =>
