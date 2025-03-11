@@ -5,6 +5,8 @@
 import { useRef } from "react";
 import Search from "./components/Search";
 import ScrollTracker from "./components/ScrollTracker";
+import UserComponent from "./components/UserLoading";
+import UseLoadingWithuseeffect from "./components/UseLoadingWithuseeffect";
 
 // Truy xuất trực tiếp vào dom và ko cần re-render
 // lưu trữ giá trị có thể thay đổi nhưng ko gây re-render
@@ -20,10 +22,12 @@ export default function UseRefPractice() {
 
     return (
         <div>
-            <input ref={inputRef} type="text" />
-            <button onClick={focusInput}>Focus Input</button>
-            <Search />
-            <ScrollTracker />
+            {/* <input ref={inputRef} type="text" /> */}
+            {/* <button onClick={focusInput}>Focus Input</button> */}
+            {/* <Search /> */}
+            {/* <ScrollTracker /> */}
+            {/* <UserComponent /> */}
+            <UseLoadingWithuseeffect />
         </div>
     );
 }
