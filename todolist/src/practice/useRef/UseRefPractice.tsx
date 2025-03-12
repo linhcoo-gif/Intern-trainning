@@ -27,7 +27,7 @@ export default function UseRefPractice() {
             {/* <Search /> */}
             {/* <ScrollTracker /> */}
             {/* <UserComponent /> */}
-            <UseLoadingWithuseeffect />
+            {/* <UseLoadingWithuseeffect /> */}
         </div>
     );
 }

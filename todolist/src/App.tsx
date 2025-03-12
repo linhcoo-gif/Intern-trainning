@@ -1,10 +1,11 @@
 import "./App.css";
-import UseRefPractice from "./practice/useRef/UseRefPractice";
+import TodoList from "./todo/components/TodoList";
 
 function App() {
     return (
         <>
-            <UseRefPractice />
+            {/* <UseRefPractice /> */}
+            <TodoList />
         </>
     );
 }
